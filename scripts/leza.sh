@@ -3,7 +3,7 @@
 while getopts 'ain' OPTION; do
 	case "$OPTION" in
 		a)
-			 echo "Rawalpindi"
+			 echo "Rawalpindi/Pakistan"
 			;;
 		i)
 
