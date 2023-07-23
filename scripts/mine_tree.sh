@@ -22,11 +22,11 @@
 # awk command is used here to filter the output
 # awk is allowing us to print the specific columns on the screen with comma separtion in between
 
-# awk -F ' , ' sets the input field separator to ", " (comma followed by space) since data is separated by this pattern in the CSV file.
-# BEGIN { OFS=" , " } sets the output field separator to ", " , so the new column is separated by a comma and space.
-# split($NF, path_arr, "/") splits the last field (filename with absolute path) using "/" as the delimiter and stores the parts in the path_arr array.
-# path_arr[length(path_arr)] extracts the last element of the path_arr array, which is the filename.
-# print $0, path_arr[length(path_arr)] } prints the entire line (all fields) and then appends the extracted filename at the end.
+# awk -F ' , ' sets the input field separator to ", " (comma followed by space) since data is separated by this pattern in the CSV file
+# BEGIN { OFS=" , " } sets the output field separator to ", " , so the new column is separated by a comma and space
+# split($NF, path_arr, "/") splits the last field (filename with absolute path) using "/" as the delimiter and stores the parts in the path_arr array
+# path_arr[length(path_arr)] extracts the last element of the path_arr array, which is the filename
+# print $0, path_arr[length(path_arr)] } prints the entire line (all fields) and then appends the extracted filename at the end
 
 
 #find $1 -type f | xargs ls -lh > file.csv
