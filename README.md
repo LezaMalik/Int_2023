@@ -5,13 +5,18 @@
 	This command prints the current user logged in.The output displays the username of the effective user in the current shell.
 		
   		`whoami` *: displays the name of the current user*
+    
+![whoami picture](./assets/whoami.JPG)
+   
 
 
 **2. man** *(manual)*
 	This command shows the manual of a command. It provides a detailed view of the command which includes NAME, SYNOPSIS, 		DESCRIPTION, OPTIONS, EXIT STATUS, RETURN VALUES, ERRORS, FILES, VERSIONS, EXAMPLES, AUTHORS and SEE ALSO.
 	*Example:*
 		
-  		`man whoami` *: this displays the manual of whoami command*
+  		`man ls` *: this displays the manual of ls command*
+    
+![man picture](./assets/man.JPG)
 
 
 **3. clear**
@@ -21,24 +26,27 @@
 **4. pwd** *(print working directory)*
 	This command prints the full name of the current/working directory.
 
+![pwd picture](./assets/pwd.JPG)
+
 
 **5. ls** *(list)*
 	This command prints the list of folders in current directory.It is designed to list the names and features of files and directories. It can be used for a single file or as many as all files and folders in a selected set of directories.
-			
-  		`ls -a`		*list all files including hidden file starting with '.'.*
-		`ls -d`		*list directories - with ' */'.*
-		`ls -l`		*list with long format - show permissions.*
-		`ls -F`		*Append indicator (one of */=>@|) to entries.*
-		`ls -lh`	*This command will show you the file sizes in human readable format.*
-		`ls -r`		*list in reverse order.*
-		`ls -i`		*list file's inode(index) number.*
-		`ls -ltr`	*View Reverse Output Order by Date.*
-		`ls -t`		*sort by time & date.*
-		`ls -n`		*It is used to print group ID and owner ID instead of their names.*
-		`ls -m`		*A list of entries separated by commas should fill the width.*
-		`ls -g`		*This allows you to exclude the owner and group information columns.*
-		`ls -q`		*Force printing of non-graphic characters in file names as the character `?';.*
-		`ls -Q`		*Place double quotations around the entry names.*
+ 			`ls -a`		*list all files including hidden file starting with '.'.*
+			`ls -d`		*list directories - with ' */'.*
+			`ls -l`		*list with long format - show permissions.*
+			`ls -F`		*Append indicator (one of */=>@|) to entries.*
+			`ls -lh`	*This command will show you the file sizes in human readable format.*
+			`ls -r`		*list in reverse order.*
+			`ls -i`		*list file's inode(index) number.*
+			`ls -ltr`	*View Reverse Output Order by Date.*
+			`ls -t`		*sort by time & date.*
+			`ls -n`		*It is used to print group ID and owner ID instead of their names.*
+			`ls -m`		*A list of entries separated by commas should fill the width.*
+			`ls -g`		*This allows you to exclude the owner and group information columns.*
+			`ls -q`		*Force printing of non-graphic characters in file names as the character `?';.*
+			`ls -Q`		*Place double quotations around the entry names.*
+   
+![ls picture](./assets/ls.JPG)
 
 
 **6. cd** *(change directory)*
@@ -108,7 +116,6 @@ xdg-open opens a file or URL in the user's preferred application. If a URL is pr
 
 **14.  head**
 	Linux head command prints the first lines of one or more files (or piped data) to standard output. By default, it shows the first 10 lines. However, head provides several arguments that can be used to modify the output.
-		
   		`-n / --lines`		*show the specified number of lines*
     		`-c / --bytes`		*show the specified number of bytes*
       		`-v / --verbose`	*show the file name tag*
@@ -117,17 +124,16 @@ xdg-open opens a file or URL in the user's preferred application. If a URL is pr
    		`head filename1` *: Outputs the first 10 lines of the file*
 
 ​		`head filename1 -n 100` *: Outputs the first 100 lines of the file*
-
+![head picture](./assets/head.JPG)
 
 **15.  tail**
 	Tail is a command which prints the last few number of lines (10 lines by default) of a certain file, then terminates.
-		
-  		`tail filename1` *: Outputs the last 10 lines of the file*
+	  `-n / --lines`		*show the specified number of lines*
+	  `-c / --bytes`		*show the specified number of bytes*
+	  `-v / --verbose`		*show the file name tag*	
+	  `-q / --quiet`		*don't separate the content of multiple files with a file name tag*
 
-  		`-n / --lines`		*show the specified number of lines*
-    		`-c / --bytes`		*show the specified number of bytes*
-      		`-v / --verbose`	*show the file name tag*
-		`-q / --quiet`		*don't separate the content of multiple files with a file name tag*
+   		`tail filename1` *: Outputs the last 10 lines of the file*
 
 ​	*With -n we can specify the number of lines to print*
 ​		`tail filename1 -n 100` *: Outputs the last 100 lines of the file*	
@@ -135,8 +141,7 @@ xdg-open opens a file or URL in the user's preferred application. If a URL is pr
 
 **16. date**
 	This command outputs the system date and time. Date command is also used to set date and time of the system. By default the date command displays the date in the time zone on which unix/linux operating system is configured.
-These are the most common formatting characters for the date command:
- 			
+These are the most common formatting characters for the date command:	
     			`%D` – Display date as mm/dd/yy
 			`%Y` – Year (e.g., 2020)
 			`%m` – Month (01-12)
@@ -196,28 +201,22 @@ It can append output to a file aswell.
   		`echo "hello" >> output.txt` *: This command will create a file output.txt and add hello to it*
 
 
-**21.  wc**
+**21.  wc** *(word count)*
 	The Linux wc command calculates a file's word, line, character, or byte count. Far from just being a utility for word processing, wc is a useful tool for a variety of system tasks.
 
  Some useful command line options supported by the wc command are as following:
-
-		-c, --bytes: It is used to print the byte counts.
-		
+		-c, --bytes: It is used to print the byte counts.	
 		-m, --chars: It is used to print the character counts.
-		
-		-l, --lines: It is used to print the newline counts.
-		
-		--files0-from=F: It is used to read input from specified files.
-		
-		-L, --max-line-length: It is used to print the maximum display width.
-		
-		-w, --words: It is used to print the word counts.
-		
-		--help: It is used to display the help manual.
-		
+		-l, --lines: It is used to print the newline counts.	
+		--files0-from=F: It is used to read input from specified files.	
+		-L, --max-line-length: It is used to print the maximum display width.	
+		-w, --words: It is used to print the word counts.	
+		--help: It is used to display the help manual.	
 		--version: It is used to display the version information.
   
 		`wc file1.txt` *: Prints the number of lines then number words, then number of bytes in the file1.txt*
+  
+![wc picture](./assets/wc.JPG)
 
 
 **22.  Piping**
@@ -234,7 +233,6 @@ Can also be used with redirect:
 
 **23.  sort**
 	It prints the sorted information on the screen, doesn't change the file.  This command processes on your data (the content of the file or output of any command) and reorders it in the specified way, which helps us to read the data efficiently.
-
 	-b	--ignore-leading-blanks		Causes sort to ignore leading blanks.
 	-d	--dictionary-order		Causes sort to consider only blanks and alphanumeric characters.
 	-f	--ignore-case			Ignores the default case, changes all lowercase letters to uppercase before comparison.
@@ -276,7 +274,7 @@ Can also be used with word count with piping
 	*It reports or omits repeated lines.*
 		`uniq filename` *: Only removes adjacent duplicate values*
 	*For alphabet characters, we can first sort and then pipe it to uniq command.*
-	`sort filename.txt | uniq` *: This will only print unique values*
+		`sort filename.txt | uniq` *: This will only print unique values*
 
 But this can easily be done with the sort command with -u
 
@@ -328,17 +326,11 @@ For finding duplicates only, with uniq use -d
 
 **27.  find**
 	*Find files and folders with different criteria (name, size, type etc).*
-
-	​	`find .` *: Finds every single nested file inside the current directory*
-	
-	​	`find . -name '*.py'` *: Finds every single nested file ending with .py inside the current directory*
-	
-	​	`find folderName -name '*.txt'` *: Finds every single  file inside the folder ending with .txt*
-	
+	​	`find .` *: Finds every single nested file inside the current directory*	
+	​	`find . -name '*.py'` *: Finds every single nested file ending with .py inside the current directory*	
+	​	`find folderName -name '*.txt'` *: Finds every single  file inside the folder ending with .txt*	
 	​	`find . -type d` *: Finds every single directory inside the current directory*
-	
 	​	`find . -type f` *: Finds every single file inside the current directory*
-	
 	​	`find . -type d -name '*E*'` *: Finds every single directory inside the current directory with E in its name*
 
 ​For Case-Insensitivity use i with name ( -iname )
@@ -349,7 +341,6 @@ For finding duplicates only, with uniq use -d
 **28.  grep**
 	Grep, or global regular expression print, is one of the most versatile and useful Linux commands available. It works by searching for text and strings that users define in a given file. In other words, grep enables users to search files for a particular pattern or word and see any lines that contain it.
 Most common flags of grep are:
-
  		-i 	(case-insensitive search)
     		-l 	(list only the names of matching files)
       		-w 	(which matches whole words only)
@@ -371,11 +362,9 @@ Most common flags of grep are:
 ​		`du -h` *: Shows the size in human readable size*
 
 
-
 **30.  df**
 	Calculates the size of mounted file system (how much space they allocate and how much is the free space left). By default, df command shows disk space in Kilobytes (KB) and uses the SI unit suffixes (e.g, M for megabytes, G for gigabytes) for clarity.
  Following are the flags available for df command.
-
  	‘-a’ or ‘–all’				Includes pseudo, duplicate, and inaccessible file systems in the output.
 	‘-B <SIZE>’ or ‘–block-size=<SIZE>’	Scales sizes by SIZE before printing them.
 	‘-h’ or ‘–human-readable’		Prints sizes in a human-readable format using power of 1024.
@@ -388,14 +377,13 @@ Most common flags of grep are:
 	‘-t <TYPE>’ or ‘–type=<TYPE>’		Limits listing to file systems of type TYPE.
 	‘-T’ or ‘–print-type’			Prints file system type
 
-​		`df -h` *: Shows the size, space etc in human readable size*
+​		 `df -h` *: Shows the size, space etc in human readable size*
 
 
 
 **31.  history**
 	All the commands previously done are memorized in history. The history built-in command lets you use words from previous command lines in the command line you are typing. This simplifies spelling corrections and the repetition of complicated commands or arguments.
 It has the following options: 
- 
 	-c		Clear the history list by deleting all of the entries.
 	-d offset	Delete the history entry at offset OFFSET.
 	-a		Append history lines from this session to the history file.
@@ -444,7 +432,7 @@ It has the following options:
 	
 
 **37.  gzip**
-	*Compress a file with gzip compression protocol LZ77 (Lempel Ziv coding)*
+	Compress a file with gzip compression protocol LZ77 (Lempel Ziv coding)
 
 ​		`gzip filename` *: Compress the file and replaces the old file with compressed one*
 
@@ -455,18 +443,18 @@ It has the following options:
 
 
 **38.  gunzip**
-	*De-Compress a file (use -k to keep the originals)*
+	De-Compress a file (use -k to keep the originals)
 
 ​		`gunzip filename.gz` *: Decompresses a file*
 
 
 
 **39.  tar**
-	*Used to archive multiple files into single file (tar -> tape archive)*
+	Used to archive multiple files into single file (tar -> tape archive)
 
 ​		`tar -cf archive.tar file1 file2` *: Creates a new archive file*
 
-​	*To unarchive file, use -xf*
+​	To unarchive file, use -xf
 ​		`tar -xf achive.tar` *: Extracts files in the current directory*
 
 ​		`tar -xf achive.tar -C directory` *: Extracts files in the specified directory*
@@ -474,14 +462,14 @@ It has the following options:
 
 
 **40.  nano**
-	*Beginner friendly editor - can run directly from your terminal. Easily modify files*
+	Beginner friendly editor - can run directly from your terminal. Easily modify files
 
 ​		`nano filename` *: Open file in terminal - can edit easily*
 
 
 
 **41.  alias**
-	*Allows us to define our own aliases. We can give names to commands and use the names in that instance. It only exists in that particular instance/terminal.*
+	Allows us to define our own aliases. We can give names to commands and use the names in that instance. It only exists in that particular instance/terminal.
 
 ​		`alias myls='ls -la'`
 
@@ -490,48 +478,48 @@ It has the following options:
 
 
 **42.  xargs**
-	*The core purpose of xargs command is to take standard input and turn it into list of arguments that other commands who accept.*
+	The core purpose of xargs command is to take standard input and turn it into list of arguments that other commands who accept.
 
 ​		`cat filename.txt | xargs rm` *: Takes arguments from the file with the help of xargs command and passes the output (name of the files) inside the rm command.*
 
 
 
 **43.  ln**
-	*Allows us to create links. Similar to the idea of shortcut on windows. (We can access the programs with the help of shortcuts from our desktop.) Both the files are pointing to the same file. If you make changes in one file, you can see the same changes in the other file.*
+	Allows us to create links. Similar to the idea of shortcut on windows. (We can access the programs with the help of shortcuts from our desktop.) Both the files are pointing to the same file. If you make changes in one file, you can see the same changes in the other file.
 
 ​		`ln orignalfile.txt hardlink.txt`= *: Outputs the same output as the original file. They are both referring/pointing to the same file in memory.*
 
-*HARD LINK: If you delete the original file, hardlink file will still be there because it is still pointing to the same location in the memory.*
+HARD LINK: If you delete the original file, hardlink file will still be there because it is still pointing to the same location in the memory.
 		`ln orignalfile.txt hardlink.txt`
 
-*SOFT LINK: If you delete the original file, softlink file will also be deleted. The soft link is pointing to the original file not the location in memory. If original is gone softlink is also gone.*
+SOFT LINK: If you delete the original file, softlink file will also be deleted. The soft link is pointing to the original file not the location in memory. If original is gone softlink is also gone.
 		`ln -s orignalfile.txt softlink.txt`
 
 
 
 **44.  who**
-	*When multiple users are logged in on the same system at the same time, who command displays the users logged into the system.*
+	When multiple users are logged in on the same system at the same time, who command displays the users logged into the system.
 
 ​		`who`= *: Displays the users logged into the system*
 
 
 
 **45.  su**  *(Switch User)*
-	*The command allows us to switch to another user within the terminal. With exit command you can exit the current user.*
+	The command allows us to switch to another user within the terminal. With exit command you can exit the current user.
 
 ​		`su username`= *: Allows to switch user with the help of password.*
 
 
 
 **46.  sudo** 
-	*Sudo is used to run a command as root or with elevated permissions. You must be first enabled to use sudo. You can then run commands as root by entering your password. The permissions are highly configurable.*
+	Sudo is used to run a command as root or with elevated permissions. You must be first enabled to use sudo. You can then run commands as root by entering your password. The permissions are highly configurable.
 
 ​		`sudo <command>`
 
 
 
 **47.  passwd** 
-	*This command allows us to change the password of the user.*
+	This command allows us to change the password of the user.
 
 ​		`passwd` *: This will allow us to change password. First it asks the current password and then allows to set new password.*
 
@@ -542,18 +530,18 @@ It has the following options:
 
 
 **48.  chown** *(Change ownership)* 
-	*This command allows us to change the ownership to another user. Owner of a file can do everything with it.*
+	This command allows us to change the ownership to another user. Owner of a file can do everything with it.
 
 ​		`chown <owner> <file>` *: Allows the ownership/permissions of a file to another user.*
 
-​	*To change the ownership of all the files and subdirectories nested in a directory, use the flag -R*
+​	To change the ownership of all the files and subdirectories nested in a directory, use the flag -R
 ​		`chown -R <owner> <file>`
 
 
 
 **49.  chmod** *(Change mode)* 
-		*This command allows us to change the permissions of a file or directory.*
-		*We need to tell:*
+		This command allows us to change the permissions of a file or directory.
+		We need to tell:
 			*1) Who are we changing permissions for*
 					*(u - user/owner of file)*
 					*(g - group/member of the group)*					
