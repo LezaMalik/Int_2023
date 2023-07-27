@@ -31,20 +31,20 @@
 
 **5. ls** *(list)*
 	This command prints the list of folders in current directory.It is designed to list the names and features of files and directories. It can be used for a single file or as many as all files and folders in a selected set of directories.
- 			`ls -a`		*list all files including hidden file starting with '.'.*
-			`ls -d`		*list directories - with ' */'.*
-			`ls -l`		*list with long format - show permissions.*
-			`ls -F`		*Append indicator (one of */=>@|) to entries.*
-			`ls -lh`	*This command will show you the file sizes in human readable format.*
-			`ls -r`		*list in reverse order.*
-			`ls -i`		*list file's inode(index) number.*
-			`ls -ltr`	*View Reverse Output Order by Date.*
-			`ls -t`		*sort by time & date.*
-			`ls -n`		*It is used to print group ID and owner ID instead of their names.*
-			`ls -m`		*A list of entries separated by commas should fill the width.*
-			`ls -g`		*This allows you to exclude the owner and group information columns.*
-			`ls -q`		*Force printing of non-graphic characters in file names as the character `?';.*
-			`ls -Q`		*Place double quotations around the entry names.*
+* `ls -a`	*list all files including hidden file starting with '.'.*
+* `ls -d`	*list directories - with ' */'.*
+* `ls -l`	*list with long format - show permissions.*
+* `ls -F`	*Append indicator (one of */=>@|) to entries.*
+* `ls -lh`	*This command will show you the file sizes in human readable format.*
+* `ls -r`	*list in reverse order.*
+* `ls -i`	*list file's inode(index) number.*
+* `ls -ltr`	*View Reverse Output Order by Date.*
+* `ls -t`	*sort by time & date.*
+* `ls -n`	*It is used to print group ID and owner ID instead of their names.*
+* `ls -m`	*A list of entries separated by commas should fill the width.*
+* `ls -g`	*This allows you to exclude the owner and group information columns.*
+* `ls -q`	*Force printing of non-graphic characters in file names as the character `?';.*
+* `ls -Q`	*Place double quotations around the entry names.*
    
 ![ls picture](./assets/ls.JPG)
 
@@ -59,8 +59,10 @@
 
 **7. mkdir** *(make directory)*
 	This command creates a directory. This command can create multiple directories at once as well as set the permissions for the directories.
-    		`mkdir pictures` *: Creates a directory with pictures name*
-    		`mkdir -p folder1/folder2/folder3 ` *: Creates a nested directory*
+	
+		 `mkdir pictures` *: Creates a directory with pictures name*
+ 
+    	`mkdir -p folder1/folder2/folder3 ` *: Creates a nested directory*
 
 
 **8. touch**
@@ -116,10 +118,10 @@ xdg-open opens a file or URL in the user's preferred application. If a URL is pr
 
 **14.  head**
 	Linux head command prints the first lines of one or more files (or piped data) to standard output. By default, it shows the first 10 lines. However, head provides several arguments that can be used to modify the output.
-  		`-n / --lines`		*show the specified number of lines*
-    		`-c / --bytes`		*show the specified number of bytes*
-      		`-v / --verbose`	*show the file name tag*
-		`-q / --quiet`		*don't separate the content of multiple files with a file name tag*
+* `-n / --lines`	*show the specified number of lines*
+* `-c / --bytes`	*show the specified number of bytes*
+* `-v / --verbose`	*show the file name tag*
+* `-q / --quiet`	*don't separate the content of multiple files with a file name tag*
  
    		`head filename1` *: Outputs the first 10 lines of the file*
 
@@ -128,10 +130,10 @@ xdg-open opens a file or URL in the user's preferred application. If a URL is pr
 
 **15.  tail**
 	Tail is a command which prints the last few number of lines (10 lines by default) of a certain file, then terminates.
-	  `-n / --lines`		*show the specified number of lines*
-	  `-c / --bytes`		*show the specified number of bytes*
-	  `-v / --verbose`		*show the file name tag*	
-	  `-q / --quiet`		*don't separate the content of multiple files with a file name tag*
+* `-n / --lines`	*show the specified number of lines*
+* `-c / --bytes`	*show the specified number of bytes*
+* `-v / --verbose`	*show the file name tag*	
+* `-q / --quiet`	*don't separate the content of multiple files with a file name tag*
 
    		`tail filename1` *: Outputs the last 10 lines of the file*
 
@@ -142,21 +144,21 @@ xdg-open opens a file or URL in the user's preferred application. If a URL is pr
 **16. date**
 	This command outputs the system date and time. Date command is also used to set date and time of the system. By default the date command displays the date in the time zone on which unix/linux operating system is configured.
 These are the most common formatting characters for the date command:	
-    			`%D` – Display date as mm/dd/yy
-			`%Y` – Year (e.g., 2020)
-			`%m` – Month (01-12)
-			`%B` – Long month name (e.g., November)
-			`%b` – Short month name (e.g., Nov)
-			`%d` – Day of month (e.g., 01)
-			`%j` – Day of year (001-366)
-			`%u` – Day of week (1-7)
-			`%A` – Full weekday name (e.g., Friday)
-			`%a` – Short weekday name (e.g., Fri)
-			`%H` – Hour (00-23)
-			`%I` – Hour (01-12)
-			`%M` – Minute (00-59)
-			`%S` – Second (00-60)
-    
+* `%D` – Display date as mm/dd/yy
+* `%Y` – Year (e.g., 2020)
+* `%m` – Month (01-12)
+* `%B` – Long month name (e.g., November)
+* `%b` – Short month name (e.g., Nov)
+* `%d` – Day of month (e.g., 01)
+* `%j` – Day of year (001-366)
+* `%u` – Day of week (1-7)
+* `%A` – Full weekday name (e.g., Friday)
+* `%a` – Short weekday name (e.g., Fri)
+* `%H` – Hour (00-23)
+* `%I` – Hour (01-12)
+* `%M` – Minute (00-59)
+* `%S` – Second (00-60)
+
 
 **17.  > (Redirecting Standard Input - Only Overwrites)**
 	Redirects the output to the specified file.
@@ -205,14 +207,14 @@ It can append output to a file aswell.
 	The Linux wc command calculates a file's word, line, character, or byte count. Far from just being a utility for word processing, wc is a useful tool for a variety of system tasks.
 
  Some useful command line options supported by the wc command are as following:
-		-c, --bytes: It is used to print the byte counts.	
-		-m, --chars: It is used to print the character counts.
-		-l, --lines: It is used to print the newline counts.	
-		--files0-from=F: It is used to read input from specified files.	
-		-L, --max-line-length: It is used to print the maximum display width.	
-		-w, --words: It is used to print the word counts.	
-		--help: It is used to display the help manual.	
-		--version: It is used to display the version information.
+* -c, --bytes: It is used to print the byte counts.	
+* -m, --chars: It is used to print the character counts.
+* -l, --lines: It is used to print the newline counts.	
+* --files0-from=F: It is used to read input from specified files.	
+* -L, --max-line-length: It is used to print the maximum display width.	
+* -w, --words: It is used to print the word counts.	
+* --help: It is used to display the help manual.	
+* --version: It is used to display the version information.
   
 		`wc file1.txt` *: Prints the number of lines then number words, then number of bytes in the file1.txt*
   
@@ -233,24 +235,24 @@ Can also be used with redirect:
 
 **23.  sort**
 	It prints the sorted information on the screen, doesn't change the file.  This command processes on your data (the content of the file or output of any command) and reorders it in the specified way, which helps us to read the data efficiently.
-	-b	--ignore-leading-blanks		Causes sort to ignore leading blanks.
-	-d	--dictionary-order		Causes sort to consider only blanks and alphanumeric characters.
-	-f	--ignore-case			Ignores the default case, changes all lowercase letters to uppercase before comparison.
-	-M	--month-sort			Sorts lines according to months (Jan-Dec).
-	-h	--human-numeric-sort		Compares human-readable numbers (e.g., 2K 1G).
-	-n	--numeric-sort			Compares data according to string numerical values.
-	-R	--random-sort			Sorts data by a random hash of keys but groups identical keys together.
-	/	--random-source=FILE		Gets random bytes from the specified FILE.
-	-r	--reverse			Reverses the comparison results.
-	-c	--check,			--check=diagnose-first	Checks if the input is already sorted but doesn't sort it.
-	/	--debug				Annotates the part of the line used for sorting.
-	-k	--key=KEYDEF			Sort data using the specified KEYDEF, which gives the key location and type.
-	-m	--merge				Causes sort to merge already sorted files.
-	-o	--output=FILE			Redirects the output to FILE instead of printing it in standard output.
-	-t	--field-separator=SEP		Uses the specified SEP separator instead of non-blank to blank transition.
-	-z	--zero-terminated		Causes sort to use NUL as the line delimiter instead of the newline character.
-	/	--help				Displays the help file with full options list and exits.
-	/	--version			Outputs the program version and exits.
+* -b	--ignore-leading-blanks		Causes sort to ignore leading blanks.
+* -d	--dictionary-order		Causes sort to consider only blanks and alphanumeric characters.
+* -f	--ignore-case			Ignores the default case, changes all lowercase letters to uppercase before comparison.
+* -M	--month-sort			Sorts lines according to months (Jan-Dec).
+* -h	--human-numeric-sort		Compares human-readable numbers (e.g., 2K 1G).
+* -n	--numeric-sort			Compares data according to string numerical values.
+* -R	--random-sort			Sorts data by a random hash of keys but groups identical keys together.
+* /	--random-source=FILE		Gets random bytes from the specified FILE.
+* -r	--reverse			Reverses the comparison results.
+* -c	--check,			--check=diagnose-first	Checks if the input is already sorted but doesn't sort it.
+* /	--debug				Annotates the part of the line used for sorting.
+* -k	--key=KEYDEF			Sort data using the specified KEYDEF, which gives the key location and type.
+* -m	--merge				Causes sort to merge already sorted files.
+* -o	--output=FILE			Redirects the output to FILE instead of printing it in standard output.
+* -t	--field-separator=SEP		Uses the specified SEP separator instead of non-blank to blank transition.
+* -z	--zero-terminated		Causes sort to use NUL as the line delimiter instead of the newline character.
+* /	--help				Displays the help file with full options list and exits.
+* /	--version			Outputs the program version and exits.
  
 		
   		`sort filename` *: Outputs the sorted file alphabetically*
@@ -341,10 +343,10 @@ For finding duplicates only, with uniq use -d
 **28.  grep**
 	Grep, or global regular expression print, is one of the most versatile and useful Linux commands available. It works by searching for text and strings that users define in a given file. In other words, grep enables users to search files for a particular pattern or word and see any lines that contain it.
 Most common flags of grep are:
- 		-i 	(case-insensitive search)
-    		-l 	(list only the names of matching files)
-      		-w 	(which matches whole words only)
-		-v 	(invert; this lists displays only the lines that do not match the pattern)
+* -i 	(case-insensitive search)
+* -l 	(list only the names of matching files)
+* -w 	(which matches whole words only)
+* -v 	(invert; this lists displays only the lines that do not match the pattern)
 		
   `grep -r "temp" .` *: Searches for the word temp in all the nested files inside the current directory (Case Sensitive)*
 
@@ -365,17 +367,17 @@ Most common flags of grep are:
 **30.  df**
 	Calculates the size of mounted file system (how much space they allocate and how much is the free space left). By default, df command shows disk space in Kilobytes (KB) and uses the SI unit suffixes (e.g, M for megabytes, G for gigabytes) for clarity.
  Following are the flags available for df command.
- 	‘-a’ or ‘–all’				Includes pseudo, duplicate, and inaccessible file systems in the output.
-	‘-B <SIZE>’ or ‘–block-size=<SIZE>’	Scales sizes by SIZE before printing them.
-	‘-h’ or ‘–human-readable’		Prints sizes in a human-readable format using power of 1024.
-	‘-H’ or ‘–si’				Prints sizes in a human-readable format using power of 1000.
-	‘-i’ or ‘–inodes’			Lists inode information instead of block usage.
-	‘-l’ or ‘–local’			Limits listing to local file systems.
-	‘-P’ or ‘–portability’			Uses POSIX output format for better portability.
-	‘–sync’					Invokes sync before getting usage info.
-	‘–total’				Elides all entries insignificant to available space and produces a grand total.
-	‘-t <TYPE>’ or ‘–type=<TYPE>’		Limits listing to file systems of type TYPE.
-	‘-T’ or ‘–print-type’			Prints file system type
+* ‘-a’ or ‘–all’				Includes pseudo, duplicate, and inaccessible file systems in the output.
+* ‘-B <SIZE>’ or ‘–block-size=<SIZE>’	Scales sizes by SIZE before printing them.
+* ‘-h’ or ‘–human-readable’		Prints sizes in a human-readable format using power of 1024.
+* ‘-H’ or ‘–si’				Prints sizes in a human-readable format using power of 1000.
+* ‘-i’ or ‘–inodes’			Lists inode information instead of block usage.
+* ‘-l’ or ‘–local’			Limits listing to local file systems.
+* ‘-P’ or ‘–portability’			Uses POSIX output format for better portability.
+* ‘–sync’					Invokes sync before getting usage info.
+* ‘–total’				Elides all entries insignificant to available space and produces a grand total.
+* ‘-t <TYPE>’ or ‘–type=<TYPE>’		Limits listing to file systems of type TYPE.
+* ‘-T’ or ‘–print-type’			Prints file system type
 
 ​		 `df -h` *: Shows the size, space etc in human readable size*
 
@@ -384,14 +386,14 @@ Most common flags of grep are:
 **31.  history**
 	All the commands previously done are memorized in history. The history built-in command lets you use words from previous command lines in the command line you are typing. This simplifies spelling corrections and the repetition of complicated commands or arguments.
 It has the following options: 
-	-c		Clear the history list by deleting all of the entries.
-	-d offset	Delete the history entry at offset OFFSET.
-	-a		Append history lines from this session to the history file.
-	-n		Read all history lines not already read from the history file.
-	-r		Read the history file and append the contents to the history list.
-	-w		Write the current history to the history file and append them to the history list
-	-p		Perform history expansion on each ARG and display the result without storing it in the history list.
-	-s		Append the ARGs to the history list as a single entry.
+* -c		Clear the history list by deleting all of the entries.
+* -d offset	Delete the history entry at offset OFFSET.
+* -a		Append history lines from this session to the history file.
+* -n		Read all history lines not already read from the history file.
+* -r		Read the history file and append the contents to the history list.
+* -w		Write the current history to the history file and append them to the history list
+* -p		Perform history expansion on each ARG and display the result without storing it in the history list.
+* -s		Append the ARGs to the history list as a single entry.
 
 ​		`history` *: Shows the history of all the previous commands used*
 
@@ -489,10 +491,10 @@ It has the following options:
 
 ​		`ln orignalfile.txt hardlink.txt`= *: Outputs the same output as the original file. They are both referring/pointing to the same file in memory.*
 
-HARD LINK: If you delete the original file, hardlink file will still be there because it is still pointing to the same location in the memory.
+* HARD LINK: If you delete the original file, hardlink file will still be there because it is still pointing to the same location in the memory.
 		`ln orignalfile.txt hardlink.txt`
 
-SOFT LINK: If you delete the original file, softlink file will also be deleted. The soft link is pointing to the original file not the location in memory. If original is gone softlink is also gone.
+* SOFT LINK: If you delete the original file, softlink file will also be deleted. The soft link is pointing to the original file not the location in memory. If original is gone softlink is also gone.
 		`ln -s orignalfile.txt softlink.txt`
 
 
@@ -540,26 +542,24 @@ SOFT LINK: If you delete the original file, softlink file will also be deleted. 
 
 
 **49.  chmod** *(Change mode)* 
-		This command allows us to change the permissions of a file or directory.
-		We need to tell:
-			*1) Who are we changing permissions for*
-					*(u - user/owner of file)*
-					*(g - group/member of the group)*					
-					*(o - others)*					
-					*(a - all of the above)*	
+	This command allows us to change the permissions of a file or directory.
+We need to tell:
+* *1) Who are we changing permissions for*
+	* *(u - user/owner of file)*
+	* *(g - group/member of the group)*					
+	* *(o - others)*					
+	* *(a - all of the above)*
+ * *2) what changes are we making*
+   	* *( - (minus sign) removes permission)*
+	* *( + (plus sign) grants permission)
+	* *( = (equals sign) set a permission and remove others)*
+ * *3) which permissions are we setting.*
+   	* *(r - read permission)*
+   	* *(w - write permission)*
+   	* *(x - execute permission)*
 
-​			*2) what changes are we making*
-​					*( - (minus sign) removes permission)*
-​					( + (plus sign) grants permission)
-​					*( = (equals sign) set a permission and remove others)*
-
-​			*3) which permissions are we setting.*
-​					*(r - read permission)*
-​					*(w - write permission)*
-​					*(x - execute permission)*
-
-
-​		*Example:*	
+*Example:*
+	
 
 ​						`chmod mode <file>` 
 
