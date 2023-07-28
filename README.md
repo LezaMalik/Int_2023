@@ -1,36 +1,57 @@
 # Int_2023
 ## Learning Linux
 
-**1. whoami**
-	This command prints the current user logged in.The output displays the username of the effective user in the current shell.
+
+### 1. whoami
+
+This command prints the current user logged in.The output displays the username of the effective user in the current shell.
 		
-  		`whoami` *: displays the name of the current user*
+  		`whoami` : displays the name of the current user
     
 ![whoami picture](./assets/whoami.JPG)
    
 
 
-**2. man** *(manual)*
-	This command shows the manual of a command. It provides a detailed view of the command which includes NAME, SYNOPSIS, 		DESCRIPTION, OPTIONS, EXIT STATUS, RETURN VALUES, ERRORS, FILES, VERSIONS, EXAMPLES, AUTHORS and SEE ALSO.
-	*Example:*
-		
-  		`man ls` *: this displays the manual of ls command*
+
+
+### 2. man *(manual)*
+
+This command shows the manual of a command. It provides a detailed view of the command which includes NAME, SYNOPSIS, 		DESCRIPTION, OPTIONS, EXIT STATUS, RETURN VALUES, ERRORS, FILES, VERSIONS, EXAMPLES, AUTHORS and SEE ALSO.
+	
+ **Example:**		
+  		
+		`man ls` : this displays the manual of ls command
     
 ![man picture](./assets/man.JPG)
 
 
-**3. clear**
-	This command clears the screen.We can clear our terminal by using short cut `CTRL+L`.
 
 
-**4. pwd** *(print working directory)*
-	This command prints the full name of the current/working directory.
+
+### 3. clear
+
+This command clears the screen.We can clear our terminal by using short cut `CTRL+L`.
+
+
+
+
+
+### 4. pwd *(print working directory)*
+
+This command prints the full name of the current/working directory.
 
 ![pwd picture](./assets/pwd.JPG)
 
 
-**5. ls** *(list)*
-	This command prints the list of folders in current directory.It is designed to list the names and features of files and directories. It can be used for a single file or as many as all files and folders in a selected set of directories.
+
+
+
+### 5. ls *(list)*
+
+This command prints the list of folders in current directory.It is designed to list the names and features of files and directories. It can be used for a single file or as many as all files and folders in a selected set of directories.
+
+Following are the flags used with ls command:
+
 * `ls -a`	*list all files including hidden file starting with '.'.*
 * `ls -d`	*list directories - with ' */'.*
 * `ls -l`	*list with long format - show permissions.*
@@ -49,36 +70,61 @@
 ![ls picture](./assets/ls.JPG)
 
 
-**6. cd** *(change directory)*
-	It is used to change the current directory of the terminal. The terminal, by default, opens the home directory.
+
+
+
+### 6. cd *(change directory)*
+
+It is used to change the current directory of the terminal. The terminal, by default, opens the home directory.
 		
-  		`cd dir` *: Changes the current directory (1 step forward)*
-		`cd..` *: Goes back to parent folder (1 step back)*
-		`cd../../..` *: Goes back to 3 folders back (3 steps back)*
+  		
+		`cd dir` *	: Changes the current directory (1 step forward)*
+		`cd..` *	: Goes back to parent folder (1 step back)*
+		`cd../../..` *	: Goes back to 3 folders back (3 steps back)*
 
 
-**7. mkdir** *(make directory)*
-	This command creates a directory. This command can create multiple directories at once as well as set the permissions for the directories.
+
+
+
+### 7. mkdir *(make directory)*
+
+This command creates a directory. This command can create multiple directories at once as well as set the permissions for the directories.
 	
-		 `mkdir pictures` *: Creates a directory with pictures name*
- 
-    	`mkdir -p folder1/folder2/folder3 ` *: Creates a nested directory*
+ 		`mkdir pictures` : Creates a directory with pictures name
+		`mkdir -p folder1/folder2/folder3 ` : Creates a nested directory
 
 
-**8. touch**
-	This command creates a file. It can make an empty file or modify the file timestamps (file access time, last date, or modification).
-    		`touch temp.txt` *: Creates a file with the name temp.txt*
 
 
-**9. rmdir** *(remove directory)*
-	The rmdir command removes the directory, specified by the Directory parameter, from the system. The directory must be empty before you can remove it, and you must have write permission in its parent directory.
+
+### 8. touch
+	
+ This command creates a file. It can make an empty file or modify the file timestamps (file access time, last date, or modification).
+    		
+		`touch temp.txt` : Creates a file with the name temp.txt
 
 
-**10. rm** *(remove)*
-	It is used to remove files, directories, and links. By default, it does not remove directories. This command normally works silently and it should be used carefully, because once you delete a file in Linux the content cannot be recovered.
-		
-  		`rm filename` *: Deletes nonempty file.*    
-		`rm -r folder` *: Deletes a folder with files inside it.( r means recursive)*
+
+
+
+### 9. rmdir *(remove directory)*
+	
+The rmdir command removes the directory, specified by the Directory parameter, from the system. The directory must be empty before you can remove it, and you must have write permission in its parent directory.
+
+
+
+
+
+### 10. rm *(remove)*
+	
+ It is used to remove files, directories, and links. By default, it does not remove directories. This command normally works silently and it should be used carefully, because once you delete a file in Linux the content cannot be recovered.
+
+  
+  		`rm filename`  : Deletes nonempty file.
+  		`rm -r folder` : Deletes a folder with files inside it.( r means recursive)
+
+
+
 
 
 **11.  open**
