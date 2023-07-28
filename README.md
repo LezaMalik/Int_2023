@@ -127,18 +127,23 @@ The rmdir command removes the directory, specified by the Directory parameter, f
 
 
 
-**11.  open**
-	Open command opens a file/folder outside the terminal but only on MAC.
+### 11.  open
+	
+ Open command opens a file/folder outside the terminal but only on MAC.
  
- 		`open filename` *: Opens the file on MAC*
-		`open . ` *:  Opens the current directory on MAC*
+ 		`open filename` : Opens the file on MAC
+		`open . ` 	:  Opens the current directory on MAC
+
   
 xdg-open opens a file or URL in the user's preferred application. If a URL is provided the URL will be opened in the user's preferred web browser. If a file is provided the file will be opened in the preferred application for files of that type. xdg-open supports file, ftp, http and https URLs.
 	
-		`xdg-open .` *: Opens the current directory on Ubuntu*
-		`xdg-open filename` *: Opens the file on Ubuntu*
+		`xdg-open .` 		: Opens the current directory on Ubuntu
+		`xdg-open filename`	: Opens the file on Ubuntu
   
-		
+
+
+
+  
 **12.  mv** *(move)*
 	Renames a file. We can use the mv command to move files and directories from one directory to another or to rename a file or directory. If you move a file or directory to a new directory without specifying a new name, it retains its original name.
 		
