@@ -596,9 +596,11 @@ Following are the flags available for df command.
 
 
 
-**31.  history**
-	All the commands previously done are memorized in history. The history built-in command lets you use words from previous command lines in the command line you are typing. This simplifies spelling corrections and the repetition of complicated commands or arguments.
+### 31.  history
+	
+ All the commands previously done are memorized in history. The history built-in command lets you use words from previous command lines in the command line you are typing. This simplifies spelling corrections and the repetition of complicated commands or arguments.
 It has the following options: 
+
 * -c		Clear the history list by deleting all of the entries.
 * -d offset	Delete the history entry at offset OFFSET.
 * -a		Append history lines from this session to the history file.
@@ -608,9 +610,10 @@ It has the following options:
 * -p		Perform history expansion on each ARG and display the result without storing it in the history list.
 * -s		Append the ARGs to the history list as a single entry.
 
-​		`history` *: Shows the history of all the previous commands used*
 
-​		`history | grep 'cookie'` *: Shows the history of all the previous commands used with the word cookie*
+		`history` *: Shows the history of all the previous commands used*
+
+  		`history | grep 'cookie'` *: Shows the history of all the previous commands used with the word cookie*
 
 
 
