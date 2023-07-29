@@ -7,6 +7,7 @@
 This command prints the current user logged in.The output displays the username of the effective user in the current shell.
 		
   		`whoami` : displays the name of the current user
+
     
 ![whoami picture](./assets/whoami.JPG)
    
@@ -21,6 +22,7 @@ This command shows the manual of a command. It provides a detailed view of the c
  **Example:**		
   		
 		`man ls` : this displays the manual of ls command
+
     
 ![man picture](./assets/man.JPG)
 
@@ -39,6 +41,7 @@ This command clears the screen.We can clear our terminal by using short cut `CTR
 ### 4. pwd *(print working directory)*
 
 This command prints the full name of the current/working directory.
+
 
 ![pwd picture](./assets/pwd.JPG)
 
@@ -66,6 +69,7 @@ Following are the flags used with ls command:
 * `ls -g`	*This allows you to exclude the owner and group information columns.*
 * `ls -q`	*Force printing of non-graphic characters in file names as the character `?';.*
 * `ls -Q`	*Place double quotations around the entry names.*
+
    
 ![ls picture](./assets/ls.JPG)
 
@@ -144,148 +148,225 @@ xdg-open opens a file or URL in the user's preferred application. If a URL is pr
 
 
   
-**12.  mv** *(move)*
-	Renames a file. We can use the mv command to move files and directories from one directory to another or to rename a file or directory. If you move a file or directory to a new directory without specifying a new name, it retains its original name.
+### 12.  mv *(move)*
+	
+ Renames a file. We can use the mv command to move files and directories from one directory to another or to rename a file or directory. If you move a file or directory to a new directory without specifying a new name, it retains its original name.
 		
-  		`mv filename1 filename2` *: Renames filename1 to filename2*
+  		
+    		`mv filename1 filename2` : Renames filename1 to filename2
+
 
 ​Also used to move files inside a folder/directory.
 
-​		`mkdir stuff` *: creates a folder name stuff*
-​		`touch pie cake cookie` *: creates 3 files pie, cake and cookie*
-​		`mv pie cake cookie stuff/` *:  Moves the 3 files(pie,cake,cookie) inside the folder stuff*
+		`mkdir stuff` 			: creates a folder name stuff
+		`touch pie cake cookie` 	: creates 3 files pie, cake and cookie    
+		`mv pie cake cookie stuff/` 	: Moves the 3 files(pie,cake,cookie) inside the folder stuff
 
-​		
 
-**13.  cp** *(copy)*
-	Copies a file. Use the cp command to create a copy of the contents of the file or directory specified by the SourceFile or SourceDirectory parameters into the file or directory specified by the TargetFile or TargetDirectory parameters.
+
+
+
+### 13.  cp *(copy)*
+	
+Copies a file. Use the cp command to create a copy of the contents of the file or directory specified by the SourceFile or SourceDirectory parameters into the file or directory specified by the TargetFile or TargetDirectory parameters.
  
-		`cp filename1 filename2` *: Copes the content of the first file (filename1) to the second file (filename2)*
+ 		`cp filename1 filename2` : Copes the content of the first file (filename1) to the second file (filename2)
+
 
 ​Also used to copy a file and move the new file inside a folder/directory.
+		
+  		`cp file.txt folder/newfile.txt` : copies the file.txt and saves the newfile.txt inside the folder
 
-​		`cp file.txt folder/newfile.txt` *: copies the file.txt and saves the newfile.txt inside the folder*
 
 
-**14.  head**
-	Linux head command prints the first lines of one or more files (or piped data) to standard output. By default, it shows the first 10 lines. However, head provides several arguments that can be used to modify the output.
-* `-n / --lines`	*show the specified number of lines*
-* `-c / --bytes`	*show the specified number of bytes*
-* `-v / --verbose`	*show the file name tag*
-* `-q / --quiet`	*don't separate the content of multiple files with a file name tag*
+
+
+### 14.  head
+	
+Linux head command prints the first lines of one or more files (or piped data) to standard output. By default, it shows the first 10 lines. However, head provides several arguments that can be used to modify the output.
+ Following are the flags used with head:
  
-   		`head filename1` *: Outputs the first 10 lines of the file*
+*	 `-n / --lines`		*show the specified number of lines*
+* 	`-c / --bytes`		*show the specified number of bytes*
+* 	`-v / --verbose`	*show the file name tag*
+* 	`-q / --quiet`		*don't separate the content of multiple files with a file name tag*
+ 
 
-​		`head filename1 -n 100` *: Outputs the first 100 lines of the file*
+  			`head filename1` 	: Outputs the first 10 lines of the file
+			`head filename1 -n 100` : Outputs the first 100 lines of the file
+
+
 ![head picture](./assets/head.JPG)
 
-**15.  tail**
-	Tail is a command which prints the last few number of lines (10 lines by default) of a certain file, then terminates.
-* `-n / --lines`	*show the specified number of lines*
-* `-c / --bytes`	*show the specified number of bytes*
-* `-v / --verbose`	*show the file name tag*	
-* `-q / --quiet`	*don't separate the content of multiple files with a file name tag*
-
-   		`tail filename1` *: Outputs the last 10 lines of the file*
-
-​	*With -n we can specify the number of lines to print*
-​		`tail filename1 -n 100` *: Outputs the last 100 lines of the file*	
 
 
-**16. date**
-	This command outputs the system date and time. Date command is also used to set date and time of the system. By default the date command displays the date in the time zone on which unix/linux operating system is configured.
+
+
+### 15.  tail
+	
+ Tail is a command which prints the last few number of lines (10 lines by default) of a certain file, then terminates.
+ 
+*	 `-n / --lines`		*show the specified number of lines*
+* 	`-c / --bytes`		*show the specified number of bytes*
+*	 `-v / --verbose`	*show the file name tag*	
+*	 `-q / --quiet`		*don't separate the content of multiple files with a file name tag*
+
+
+  		 tail filename1` : Outputs the last 10 lines of the file
+
+
+​With -n we can specify the number of lines to print
+
+		`tail filename1 -n 100` : Outputs the last 100 lines of the file
+
+
+
+
+
+### 16. date
+	
+This command outputs the system date and time. Date command is also used to set date and time of the system. By default the date command displays the date in the time zone on which unix/linux operating system is configured.
+
+ 
 These are the most common formatting characters for the date command:	
-* `%D` – Display date as mm/dd/yy
-* `%Y` – Year (e.g., 2020)
-* `%m` – Month (01-12)
-* `%B` – Long month name (e.g., November)
-* `%b` – Short month name (e.g., Nov)
-* `%d` – Day of month (e.g., 01)
-* `%j` – Day of year (001-366)
-* `%u` – Day of week (1-7)
-* `%A` – Full weekday name (e.g., Friday)
-* `%a` – Short weekday name (e.g., Fri)
-* `%H` – Hour (00-23)
-* `%I` – Hour (01-12)
-* `%M` – Minute (00-59)
-* `%S` – Second (00-60)
+
+* 	`%D` – Display date as mm/dd/yy
+* 	`%Y` – Year (e.g., 2020)
+* 	`%m` – Month (01-12)
+* 	`%B` – Long month name (e.g., November)
+* 	`%b` – Short month name (e.g., Nov)
+* 	`%d` – Day of month (e.g., 01)
+* 	`%j` – Day of year (001-366)
+*	`%u` – Day of week (1-7)
+*	`%A` – Full weekday name (e.g., Friday)
+*	`%a` – Short weekday name (e.g., Fri)
+* 	`%H` – Hour (00-23)
+* 	`%I` – Hour (01-12)
+* 	`%M` – Minute (00-59)
+* 	`%S` – Second (00-60)
 
 
-**17.  > (Redirecting Standard Input - Only Overwrites)**
-	Redirects the output to the specified file.
-		`date > file.txt` *: Saves the date inside file.txt*
 
-​	If we add again to the same file, it replaces the content. Only overwrites does not append.
+
+
+### 17.  > (Redirecting Standard Input - Only Overwrites)
+	
+Redirects the output to the specified file.
+		
+		`date > file.txt` : Saves the date inside file.txt
+  
+If we add again to the same file, it replaces the content. Only overwrites does not append.
 ​				
 
-**18.  >> (Redirecting Standard Input - Appends)**
-	Redirects the output to the specified file.
+
+
+
+### 18.  >> (Redirecting Standard Input - Appends)
+	
+Redirects the output to the specified file.
 		
-  		`date >> file1.txt` *: Saves the date inside file1.txt*
-		`whoami>> file1.txt` *: Saves the username inside file1.txt*
-
-​	If we add again to the same file, it appends the content.
-
-
-**19.  cat**
-	Outputs the whole content of the specified file.It helps us to create, view, and concatenate files.
+  		`date >> file1.txt` : Saves the date inside file1.txt
 		
-  		`cat file1.txt` *: Prints the whole output of the file1*
-		`cat file1.txt file2.txt` *: Prints the whole output of file1 and file2*
+		`whoami>> file1.txt` : Saves the username inside file1.txt
 
-​	*For saving content into a new file, we can use redirect.* 	
-​		
+If we add again to the same file, it appends the content.
+
+
+
+
+
+### 19.  cat
+	
+Outputs the whole content of the specified file. It helps us to create, view, and concatenate files.
+		
+  		`cat file1.txt` 		: Prints the whole output of the file1
+    		
+		`cat file1.txt file2.txt` 	: Prints the whole output of file1 and file2
+
+
+​For saving content into a new file, we can use redirect.
+
 		`cat file1.txt file2.txt file3.txt > newfile`
 
 
-**20.  less**
-	Outputs the whole content of the specified file in an interactive UI. The less command is Linux utility which can be used to read contents of text file one page (one screen) per time. It has faster access because if the file is large, it doesn't access the complete file, but accesses it page by page
-		
-  		`less file1.txt` *: Prints the output of the file1 in an interactive UI*
-	
 
-**20.  echo**
-	It prints to the output the argument passed to it. It is one of the basic Linux commands used in shell scripting and Bash files to display output status text at the command line
+
+
+### 20.  less
+	
+Outputs the whole content of the specified file in an interactive UI. The less command is Linux utility which can be used to read contents of text file one page (one screen) per time. It has faster access because if the file is large, it doesn't access the complete file, but accesses it page by page.
+		
+  
+		`less file1.txt` : Prints the output of the file1 in an interactive UI
+
+
+
+
+
+### 21.  echo
+	
+It prints to the output the argument passed to it. It is one of the basic Linux commands used in shell scripting and Bash files to display output status text at the command line.
  
-		`echo "hello"` *: Prints hello to the screen*
+		`echo "hello"` : Prints hello to the screen
   
 It can append output to a file aswell.
 		
-  		`echo "hello" >> output.txt` *: This command will create a file output.txt and add hello to it*
+		`echo "hello" >> output.txt` : This command will create a file output.txt and add hello to it
 
 
-**21.  wc** *(word count)*
-	The Linux wc command calculates a file's word, line, character, or byte count. Far from just being a utility for word processing, wc is a useful tool for a variety of system tasks.
 
- Some useful command line options supported by the wc command are as following:
-* -c, --bytes: It is used to print the byte counts.	
-* -m, --chars: It is used to print the character counts.
-* -l, --lines: It is used to print the newline counts.	
-* --files0-from=F: It is used to read input from specified files.	
-* -L, --max-line-length: It is used to print the maximum display width.	
-* -w, --words: It is used to print the word counts.	
-* --help: It is used to display the help manual.	
-* --version: It is used to display the version information.
+
+
+### 22.  wc *(word count)*
+	
+The Linux wc command calculates a file's word, line, character, or byte count. Far from just being a utility for word processing, wc is a useful tool for a variety of system tasks.
+
+ 
+Some useful command line options supported by the wc command are as following:
+
+
+* 	-c, --bytes		: It is used to print the byte counts.	
+* 	-m, --chars		: It is used to print the character counts.
+* 	-l, --lines		: It is used to print the newline counts.	
+*	 --files0-from=F	: It is used to read input from specified files.	
+* 	-L, --max-line-length	: It is used to print the maximum display width.	
+* 	-w, --words		: It is used to print the word counts.	
+* 	--help			: It is used to display the help manual.	
+* 	--version		: It is used to display the version information.
+
   
-		`wc file1.txt` *: Prints the number of lines then number words, then number of bytes in the file1.txt*
+   		wc file1.txt` : Prints the number of lines then number words, then number of bytes in the file1.txt
+
   
 ![wc picture](./assets/wc.JPG)
 
 
-**22.  Piping**
-​	The pipe is used to combine two or more commands, and in this, the output of one command acts as input to another command, and this command's output may act as input to the next command, and so on. It can also be visualized as a temporary connection between two or more commands/ programs/ processes.
 
-​		`date | wc` *: Outputs the line no, word count and bytes of date command*
+
+
+### 23.  Piping
+​	
+The pipe is used to combine two or more commands, and in this, the output of one command acts as input to another command, and this command's output may act as input to the next command, and so on. It can also be visualized as a temporary connection between two or more commands/ programs/ processes.
+
+		`date | wc` *: Outputs the line no, word count and bytes of date command*
 
 		`cat filename1 filename2 | wc` *: This gives the word count of both the files combined*
+
 
 Can also be used with redirect:
 	
  		`cat file1 file2 | wc -l > newfile.txt` *: This command will concatenate both the files and then count the number of lines and save them in newfile.txt*
 
 
-**23.  sort**
-	It prints the sorted information on the screen, doesn't change the file.  This command processes on your data (the content of the file or output of any command) and reorders it in the specified way, which helps us to read the data efficiently.
+
+
+
+### 24.  sort
+	
+It prints the sorted information on the screen, doesn't change the file.  This command processes on your data (the content of the file or output of any command) and reorders it in the specified way, which helps us to read the data efficiently.
+
+Following are the flags used with sort:
+
 * -b	--ignore-leading-blanks		Causes sort to ignore leading blanks.
 * -d	--dictionary-order		Causes sort to consider only blanks and alphanumeric characters.
 * -f	--ignore-case			Ignores the default case, changes all lowercase letters to uppercase before comparison.
@@ -306,113 +387,187 @@ Can also be used with redirect:
 * /	--version			Outputs the program version and exits.
  
 		
-  		`sort filename` *: Outputs the sorted file alphabetically*
-	
+
+  		`sort filename` : Outputs the sorted file alphabetically
+
+ 
  To sort numerically, use -n
  
-		`sort -n filename` *: Outputs the sorted file numerically*
+		`sort -n filename` : Outputs the sorted file numerically
 
 For unique values use -u, for reverse sort use -r
 
 For finding unique numbers in a file
 		
-  		`sort -un filename`
+		`sort -un filename`
 
 Can also be used with word count with piping
 	
-		`sort -un filename | wc -l` *: This will give the line numbers of the uniquely sorted numbers file*
+		`sort -un filename | wc -l` : This will give the line numbers of the uniquely sorted numbers file
 
 
-**24.  uniq**
-	*It reports or omits repeated lines.*
+
+
+
+### 25.  uniq
+	
+ It reports or omits repeated lines.
+
 		`uniq filename` *: Only removes adjacent duplicate values*
-	*For alphabet characters, we can first sort and then pipe it to uniq command.*
-		`sort filename.txt | uniq` *: This will only print unique values*
+
+
+For alphabet characters, we can first sort and then pipe it to uniq command.
+	
+ 		`sort filename.txt | uniq` *: This will only print unique values*
 
 But this can easily be done with the sort command with -u
 
+
 For finding duplicates only, with uniq use -d
-	`sort filename.txt | uniq -d`
-			*Example:* 	
-					*Apples*
-					*Bananas*
-
-** For finding non-duplicates only, with uniq use -u*
-	`sort filename.txt | uniq -u`
-			*Example:* 	
-					*Pear*
-
-** For finding count, with uniq use -c*
-	`sort filename.txt | uniq -c`
-			*Example:* 	
-					*4 Apples*
-					*6 Bananas*
-					*1 Pear*
-
-** For finding count in asc order, with uniq use -c*
-	`sort filename.txt | uniq -c | sort -n`
-			*Example:* 	
-					*1 Pear*	
-					*4 Apples*
-					*6 Bananas*
-						 
-
-**25.  Expansion**
-	Each time we type a command line and press the enter key, bash performs several processes upon the text before it carries out our command.
-		`echo *` *: Prints the paths of all the files and folders in the current directory*
-		`echo *.txt` *: Prints the paths of all the files ending with .txt in the current directory*
-
-​		`echo *.??` *: Prints the paths of all the files ending with . and any two characters in the current directory ex: app.js, app.py*
-
-​		`echo {a.b,c}.txt` *:  This Outputs : a.txt b.txt c.txt*
-
-​		`touch app.{js,html,css,py}` *: This creates 4 files in the current directory with names app.js, app.html app.css and app.py*
-
-​		`echo {1..99}` *: Prints numbers from 1 till 99*
-
-
-**26.  diff**
-	It shows the difference between two files. It can also compare the contents of directories.
 		
-  		*-y : shows both files side by side*
-	
+  		`sort filename.txt | uniq -d`
 
-**27.  find**
-	*Find files and folders with different criteria (name, size, type etc).*
-	​	`find .` *: Finds every single nested file inside the current directory*	
-	​	`find . -name '*.py'` *: Finds every single nested file ending with .py inside the current directory*	
-	​	`find folderName -name '*.txt'` *: Finds every single  file inside the folder ending with .txt*	
-	​	`find . -type d` *: Finds every single directory inside the current directory*
-	​	`find . -type f` *: Finds every single file inside the current directory*
-	​	`find . -type d -name '*E*'` *: Finds every single directory inside the current directory with E in its name*
+*Example:* 	
+
+*Apples*
+
+*Bananas*
+
+For finding non-duplicates only, with uniq use -u
+	
+		`sort filename.txt | uniq -u`
+			
+*Example:* 	
+	
+ *Pear*
+
+
+For finding count, with uniq use -c
+
+		`sort filename.txt | uniq -c`
+			
+*Example:* 	
+
+*4 Apples*
+ 
+*6 Bananas*
+   
+*1 Pear*
+
+
+For finding count in asc order, with uniq use -c
+
+		`sort filename.txt | uniq -c | sort -n`
+			
+*Example:* 
+
+*1 Pear*	
+ 
+*4 Apples*
+  	
+*6 Bananas*
+
+
+
+
+
+### 26.  Expansion
+	
+Each time we type a command line and press the enter key, bash performs several processes upon the text before it carries out our command.
+		
+		`echo *` : Prints the paths of all the files and folders in the current directory
+
+  
+		`echo *.txt` : Prints the paths of all the files ending with .txt in the current directory
+
+
+		`echo *.??` : Prints the paths of all the files ending with . and any two characters in the current directory ex: app.js, app.py
+
+
+		`echo {a.b,c}.txt` :  This Outputs : a.txt b.txt c.txt
+
+ 
+		`touch app.{js,html,css,py}` *: This creates 4 files in the current directory with names app.js, app.html app.css and app.py*
+  
+
+		`echo {1..99}` : Prints numbers from 1 till 99
+
+
+
+
+
+### 27.  diff
+	
+ It shows the difference between two files. It can also compare the contents of directories.
+		
+		*-y : shows both files side by side*
+
+
+
+
+
+### 28.  find
+	
+Find files and folders with different criteria (name, size, type etc).
+
+		`find .` : Finds every single nested file inside the current directory	
+		
+  		`find . -name '*.py'` : Finds every single nested file ending with .py inside the current directory
+	​	
+ 		`find folderName -name '*.txt'` : Finds every single  file inside the folder ending with .txt
+   
+		`find . -type d` : Finds every single directory inside the current directory
+	​	
+ 		`find . -type f` : Finds every single file inside the current directory
+	​	
+ 		`find . -type d -name '*E*'` : Finds every single directory inside the current directory with E in its name
+
+
 
 ​For Case-Insensitivity use i with name ( -iname )
 
-​	`find . -name 'E*' -or -name 'F*'` *: Finds every single directory/file inside the current directory with E and F in the start of  their name*
+
+		`find . -name 'E*' -or -name 'F*'` : Finds every single directory/file inside the current directory with E and F in the start of  their name
+
+
+
 
  
-**28.  grep**
-	Grep, or global regular expression print, is one of the most versatile and useful Linux commands available. It works by searching for text and strings that users define in a given file. In other words, grep enables users to search files for a particular pattern or word and see any lines that contain it.
+### 29.  grep
+	
+Grep, or global regular expression print, is one of the most versatile and useful Linux commands available. It works by searching for text and strings that users define in a given file. In other words, grep enables users to search files for a particular pattern or word and see any lines that contain it.
+
+
 Most common flags of grep are:
+
 * -i 	(case-insensitive search)
 * -l 	(list only the names of matching files)
 * -w 	(which matches whole words only)
 * -v 	(invert; this lists displays only the lines that do not match the pattern)
 		
-  `grep -r "temp" .` *: Searches for the word temp in all the nested files inside the current directory (Case Sensitive)*
 
- ​ `grep -ri "temp" .` *: Searches for the word temp in all the nested files inside the current directory (Case Insensitive)*
-
+  		`grep -r "temp" .` : Searches for the word temp in all the nested files inside the current directory (Case Sensitive)
 
 
- **29.  du**
-	Calculates the size of directory as a whole. By default, it measures the current directory and all its subdirectories, printing totals in blocks for each, with a grand total at the bottom.
+		`grep -ri "temp" .` : Searches for the word temp in all the nested files inside the current directory (Case Insensitive)
 
-​		`du -m` *: Shows the size of directories in megabytes*
 
-​		`du -g` *: Shows the size in gigabytes*
 
-​		`du -h` *: Shows the size in human readable size*
+
+
+ ### 30.  du
+	
+Calculates the size of directory as a whole. By default, it measures the current directory and all its subdirectories, printing totals in blocks for each, with a grand total at the bottom.
+
+
+		`du -m` : Shows the size of directories in megabytes
+
+		`du -g` : Shows the size in gigabytes
+
+		`du -h` : Shows the size in human readable size
+
+
+
 
 
 **30.  df**
