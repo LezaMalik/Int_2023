@@ -570,22 +570,29 @@ Calculates the size of directory as a whole. By default, it measures the current
 
 
 
-**30.  df**
-	Calculates the size of mounted file system (how much space they allocate and how much is the free space left). By default, df command shows disk space in Kilobytes (KB) and uses the SI unit suffixes (e.g, M for megabytes, G for gigabytes) for clarity.
- Following are the flags available for df command.
+### 31.  df
+	
+Calculates the size of mounted file system (how much space they allocate and how much is the free space left). By default, df command shows disk space in Kilobytes (KB) and uses the SI unit suffixes (e.g, M for megabytes, G for gigabytes) for clarity.
+
+ 
+Following are the flags available for df command.
+ 
 * ‘-a’ or ‘–all’				Includes pseudo, duplicate, and inaccessible file systems in the output.
-* ‘-B <SIZE>’ or ‘–block-size=<SIZE>’	Scales sizes by SIZE before printing them.
-* ‘-h’ or ‘–human-readable’		Prints sizes in a human-readable format using power of 1024.
-* ‘-H’ or ‘–si’				Prints sizes in a human-readable format using power of 1000.
-* ‘-i’ or ‘–inodes’			Lists inode information instead of block usage.
-* ‘-l’ or ‘–local’			Limits listing to local file systems.
+* ‘-B <SIZE>’ or ‘–block-size=<SIZE>’		Scales sizes by SIZE before printing them.
+* ‘-h’ or ‘–human-readable’			Prints sizes in a human-readable format using power of 1024.
+* ‘-H’ or ‘–si’					Prints sizes in a human-readable format using power of 1000.
+* ‘-i’ or ‘–inodes’				Lists inode information instead of block usage.
+* ‘-l’ or ‘–local’				Limits listing to local file systems.
 * ‘-P’ or ‘–portability’			Uses POSIX output format for better portability.
 * ‘–sync’					Invokes sync before getting usage info.
-* ‘–total’				Elides all entries insignificant to available space and produces a grand total.
-* ‘-t <TYPE>’ or ‘–type=<TYPE>’		Limits listing to file systems of type TYPE.
-* ‘-T’ or ‘–print-type’			Prints file system type
+* ‘–total’					Elides all entries insignificant to available space and produces a grand total.
+* ‘-t <TYPE>’ or ‘–type=<TYPE>’			Limits listing to file systems of type TYPE.
+* ‘-T’ or ‘–print-type’				Prints file system type
 
-​		 `df -h` *: Shows the size, space etc in human readable size*
+
+		`df -h` : Shows the size, space etc in human readable size
+
+
 
 
 
