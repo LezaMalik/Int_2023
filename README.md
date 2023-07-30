@@ -801,51 +801,74 @@ Sudo is used to run a command as root or with elevated permissions. You must be 
 
 
 
-**47.  passwd** 
-	This command allows us to change the password of the user.
+### 47.  passwd 
+	
+This command allows us to change the password of the user.
 
-​		`passwd` *: This will allow us to change password. First it asks the current password and then allows to set new password.*
-
-*To change some other user's password, first you need to have the permission then with sudo you can change password.
-
-​	`sudo passwrd user` *: First you need to enter your own password and then you can change the other user's password only if you have the administration permissions.*
+		
+		`passwd` : This will allow us to change password. First it asks the current password and then allows to set new password.
 
 
+To change some other user's password, first you need to have the permission then with sudo you can change password.
 
-**48.  chown** *(Change ownership)* 
-	This command allows us to change the ownership to another user. Owner of a file can do everything with it.
 
-​		`chown <owner> <file>` *: Allows the ownership/permissions of a file to another user.*
-
-​	To change the ownership of all the files and subdirectories nested in a directory, use the flag -R
-​		`chown -R <owner> <file>`
+		`sudo passwrd user` : First you need to enter your own password and then you can change the other user's password only if you have the administration permissions.
 
 
 
-**49.  chmod** *(Change mode)* 
-	This command allows us to change the permissions of a file or directory.
+
+
+### 48.  chown *(Change ownership)* 
+	
+This command allows us to change the ownership to another user. Owner of a file can do everything with it.
+
+		
+  		`chown <owner> <file>` *: Allows the ownership/permissions of a file to another user.*
+
+​	
+To change the ownership of all the files and subdirectories nested in a directory, use the flag -R
+​
+		`chown -R <owner> <file>`
+
+
+
+
+
+### 49.  chmod *(Change mode)* 
+	
+This command allows us to change the permissions of a file or directory.
+
+
 We need to tell:
-* *1) Who are we changing permissions for*
+
+* Who are we changing permissions for
+     
 	* *(u - user/owner of file)*
-	* *(g - group/member of the group)*					
-	* *(o - others)*					
+   	* *(g - group/member of the group)*
+   	* *(o - others)*					
 	* *(a - all of the above)*
- * *2) what changes are we making*
+
+   
+ * What changes are we making
+      
    	* *( - (minus sign) removes permission)*
-	* *( + (plus sign) grants permission)
+	* *( + (plus sign) grants permission)*
 	* *( = (equals sign) set a permission and remove others)*
- * *3) which permissions are we setting.*
+
+   
+ * Which permissions are we setting.
    	* *(r - read permission)*
    	* *(w - write permission)*
    	* *(x - execute permission)*
 
+
+
 *Example:*
-	
-
-​						`chmod mode <file>` 
-
-​				`chmod u+x <file>`  *: Grants permission to the user of the file to execute .*
-
-​				`chmod a-x <file>`  *: Removes permission from all (user, group, others) to execute.*
-
-​				`chmod a+w <file>`  *: Grants permission of write to all (user, group, others).*
+		
+		`chmod mode <file>` 
+  		
+		`chmod u+x <file>`  : Grants permission to the user of the file to execute .
+		
+  		`chmod a-x <file>`  : Removes permission from all (user, group, others) to execute.
+		
+  		`chmod a+w <file>`  : Grants permission of write to all (user, group, others).
