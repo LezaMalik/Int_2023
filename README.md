@@ -1,6 +1,8 @@
 # Int_2023
 ## Learning Linux
 
+*These notes are for self-learning purpose. It contains details of some of the most important Linux Commands with their syntax and examples. I have also attached snapshots for deep understanding.*
+
 
 ### 1. whoami
 
@@ -596,9 +598,9 @@ Following are the flags available for df command.
 
 
 
-### 31.  history
+### 32.  history
 	
- All the commands previously done are memorized in history. The history built-in command lets you use words from previous command lines in the command line you are typing. This simplifies spelling corrections and the repetition of complicated commands or arguments.
+All the commands previously done/used are memorized in history. The history built-in command lets you use words from previous command lines in the command line you are typing. This simplifies spelling corrections and the repetition of complicated commands or arguments.
 It has the following options: 
 
 * -c		Clear the history list by deleting all of the entries.
@@ -611,128 +613,191 @@ It has the following options:
 * -s		Append the ARGs to the history list as a single entry.
 
 
-		`history` *: Shows the history of all the previous commands used*
 
-  		`history | grep 'cookie'` *: Shows the history of all the previous commands used with the word cookie*
+		`history`		  : Shows the history of all the previous commands used
+
+  		`history | grep 'cookie'` : Shows the history of all the previous commands used with the word cookie
 
 
 
-**32.  ps**
-	Display info about currently running processes. You can use it to learn more about what is happening in your system's background processes. Depending on the input parameters, this command may produce different results.
 
-​		`ps` *: Shows the history of all the processes running at the time*
 
-​		`ps ax` *: Shows the history of all the processes initiated by anyone running at the time*
+### 33.  ps
+	
+Display info about currently running processes. You can use it to learn more about what is happening in your system's background processes. Depending on the input parameters, this command may produce different results.
+
+		
+  		`ps` : Shows the history of all the processes running at the time
+		
+  		`ps ax` : Shows the history of all the processes initiated by anyone running at the time
 
  
 
-**33.  top**
-	The top command is used to show the active Linux processes. It provides a dynamic real-time view of the running system. Usually, this command shows the summary information of the system and the list of processes or threads which are currently managed by the Linux kernel.
-
-​		`ps` *: Shows the history of all the processes running at the time*
 
 
+### 34.  top
+	
+The top command is used to show the active Linux processes. It provides a dynamic real-time view of the running system. Usually, this command shows the summary information of the system and the list of processes or threads which are currently managed by the Linux kernel.
 
-**34.  kill**
-	It receives signals and then react to it: to kill a process. Kill command sends a signal to a process that terminates the process. If the user doesn’t specify any signal which is to be sent along with the kill command, then a default TERM signal is sent that terminates the process.
-
-​		`kill <PID>` *: Kills a process with this process id*
-
-​		`kill -9 <PID>` *: Kills a process with this process id* (Brutally Kill) 
+		
+  		`ps` *: Shows the history of all the processes running at the time*
 
 
 
-**35.  killall**
-	It receives signals and then react to it: to kill a program, can be more processes. Killall sends a signal to all processes running any of the specified commands. If no signal name is specified, SIGTERM is sent. Signals can be specified either by name (e.g. -HUP or -SIGHUP) or by number (e.g. -1) or by option -s.
 
-​		`killall -9 <pname>` *: Kills all the programs with the pname*
+
+### 35.  kill
+	
+It receives signals and then react to it: to kill a process. Kill command sends a signal to a process that terminates the process. If the user doesn’t specify any signal which is to be sent along with the kill command, then a default TERM signal is sent that terminates the process.
+
+		
+  		`kill <PID>` : Kills a process with this process id
+		
+  		`kill -9 <PID>` : Kills a process with this process id (Brutally Kill) 
+
+
+
+
+
+### 36.  killall
+	
+It receives signals and then react to it: to kill a program, can be more processes. Killall sends a signal to all processes running any of the specified commands. If no signal name is specified, SIGTERM is sent. Signals can be specified either by name (e.g. -HUP or -SIGHUP) or by number (e.g. -1) or by option -s.
+
+		
+  		`killall -9 <pname>` : Kills all the programs with the pname
 
 	
 
-**37.  gzip**
-	Compress a file with gzip compression protocol LZ77 (Lempel Ziv coding)
-
-​		`gzip filename` *: Compress the file and replaces the old file with compressed one*
-
-​		`gzip -k filename` *: Makes a new compressed file with the gz extension*
-
-​		`gzip -d filename.gz` *: Decompresses a file*
 
 
+### 37.  gzip
+	
+Compress a file with gzip compression protocol LZ77 (Lempel Ziv coding)
 
-**38.  gunzip**
-	De-Compress a file (use -k to keep the originals)
-
-​		`gunzip filename.gz` *: Decompresses a file*
+		`gzip filename` 	: Compress the file and replaces the old file with compressed one
+		
+  		`gzip -k filename` 	: Makes a new compressed file with the gz extension
+		
+  		`gzip -d filename.gz`	: Decompresses a file
 
 
 
-**39.  tar**
-	Used to archive multiple files into single file (tar -> tape archive)
-
-​		`tar -cf archive.tar file1 file2` *: Creates a new archive file*
-
-​	To unarchive file, use -xf
-​		`tar -xf achive.tar` *: Extracts files in the current directory*
-
-​		`tar -xf achive.tar -C directory` *: Extracts files in the specified directory*
 
 
-
-**40.  nano**
-	Beginner friendly editor - can run directly from your terminal. Easily modify files
-
-​		`nano filename` *: Open file in terminal - can edit easily*
+### 38.  gunzip
+	
+De-Compress a file (use -k to keep the originals)
+		
+  
+		`gunzip filename.gz` : Decompresses a file
 
 
 
-**41.  alias**
-	Allows us to define our own aliases. We can give names to commands and use the names in that instance. It only exists in that particular instance/terminal.
-
-​		`alias myls='ls -la'`
-
-​		`myls`= *: This shows the result of ls -la command.*
 
 
+### 39.  tar *(tape archive)*
 
-**42.  xargs**
-	The core purpose of xargs command is to take standard input and turn it into list of arguments that other commands who accept.
+Used to archive multiple files into single file (tar -> tape archive)
 
-​		`cat filename.txt | xargs rm` *: Takes arguments from the file with the help of xargs command and passes the output (name of the files) inside the rm command.*
+		
+  		`tar -cf archive.tar file1 file2` : Creates a new archive file
+    
+
+​To unarchive file, use -xf
+
+		
+  		`tar -xf achive.tar` : Extracts files in the current directory
+
+		`tar -xf achive.tar -C directory` : Extracts files in the specified directory
 
 
 
-**43.  ln**
-	Allows us to create links. Similar to the idea of shortcut on windows. (We can access the programs with the help of shortcuts from our desktop.) Both the files are pointing to the same file. If you make changes in one file, you can see the same changes in the other file.
 
-​		`ln orignalfile.txt hardlink.txt`= *: Outputs the same output as the original file. They are both referring/pointing to the same file in memory.*
 
-* HARD LINK: If you delete the original file, hardlink file will still be there because it is still pointing to the same location in the memory.
+### 40.  nano
+	
+Beginner friendly editor - can run directly from your terminal. Easily modify files
+
+
+		`nano filename` : Open file in terminal - can edit easily
+
+
+
+
+
+### 41.  alias
+	
+Allows us to define our own aliases. We can give names to commands and use the names in that instance. It only exists in that particular instance/terminal.
+
+  
+		`alias myls='ls -la'`
+		
+  		`myls`= : This shows the result of ls -la command.
+
+
+
+### 42.  xargs
+	
+The core purpose of xargs command is to take standard input and turn it into list of arguments that other commands who accept.
+
+
+		`cat filename.txt | xargs rm` : Takes arguments from the file with the help of xargs command and passes the output (name of the files) inside the rm command.
+
+
+
+
+
+### 43.  ln
+	
+Allows us to create links. Similar to the idea of shortcut on windows. (We can access the programs with the help of shortcuts from our desktop.) Both the files are pointing to the same file. If you make changes in one file, you can see the same changes in the other file.
+
+
+		`ln orignalfile.txt hardlink.txt`= : Outputs the same output as the original file. They are both referring/pointing to the same file in memory.
+
+
+HARD LINK: If you delete the original file, hardlink file will still be there because it is still pointing to the same location in the memory.
+
 		`ln orignalfile.txt hardlink.txt`
 
-* SOFT LINK: If you delete the original file, softlink file will also be deleted. The soft link is pointing to the original file not the location in memory. If original is gone softlink is also gone.
+  
+
+SOFT LINK: If you delete the original file, softlink file will also be deleted. The soft link is pointing to the original file not the location in memory. If original is gone softlink is also gone.
+
 		`ln -s orignalfile.txt softlink.txt`
 
 
 
-**44.  who**
-	When multiple users are logged in on the same system at the same time, who command displays the users logged into the system.
-
-​		`who`= *: Displays the users logged into the system*
 
 
+### 44.  who
+	
+When multiple users are logged in on the same system at the same time, who command displays the users logged into the system.
 
-**45.  su**  *(Switch User)*
-	The command allows us to switch to another user within the terminal. With exit command you can exit the current user.
-
-​		`su username`= *: Allows to switch user with the help of password.*
+		
+  		`who`= : Displays the users logged into the system
 
 
 
-**46.  sudo** 
-	Sudo is used to run a command as root or with elevated permissions. You must be first enabled to use sudo. You can then run commands as root by entering your password. The permissions are highly configurable.
 
-​		`sudo <command>`
+
+### 45.  su  *(Switch User)*
+	
+The command allows us to switch to another user within the terminal. With exit command you can exit the current user.
+
+		
+  		`su username`= : Allows to switch user with the help of password.
+
+
+
+
+
+### 46.  sudo
+	
+Sudo is used to run a command as root or with elevated permissions. You must be first enabled to use sudo. You can then run commands as root by entering your password. The permissions are highly configurable.
+
+		`sudo <command>`
+
+
 
 
 
