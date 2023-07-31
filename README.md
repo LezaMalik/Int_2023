@@ -14,7 +14,9 @@ This command prints the current user logged in.The output displays the username 
 The whoami command accepts only two options:
 
 * -h, --help 	: Display a help message and exit.
+  
 * -V, --version : Shows the version information and exit.
+
 
 
     
@@ -40,6 +42,7 @@ Following are the options we can use with man command:
 * -C file, --config-file=file1 : Use configuration file file1 rather than the default of ~/.manpath.
 * -d, --debug : Print debugging information.
 * -D, --default : This option, when used, is normally specified as the first option; it resets man's behaviour to its default. Its use is to reset those options that may have been set in $MANOPT. Any options that follow -D will have their usual effect.
+
 
     
 ![man picture](./assets/man.JPG)
@@ -703,7 +706,7 @@ Following are the options used with diff command
 
 ### 28.  find
 	
-Find files and folders with different criteria (name, size, type etc).
+Find files and folders with different criteria ( name, size, type etc ).
 
 		`find .` : Finds every single nested file inside the current directory	
 		
@@ -965,7 +968,7 @@ The core purpose of xargs command is to take standard input and turn it into lis
 
 ### 43.  ln
 	
-Allows us to create links. Similar to the idea of shortcut on windows. (We can access the programs with the help of shortcuts from our desktop.) Both the files are pointing to the same file. If you make changes in one file, you can see the same changes in the other file.
+Allows to create links. Similar to the idea of shortcut on windows. (We can access the programs with the help of shortcuts from our desktop.) Both the files are pointing to the same file. If you make changes in one file, you can see the same changes in the other file.
 
 
 		`ln orignalfile.txt hardlink.txt`= : Outputs the same output as the original file. They are both referring/pointing to the same file in memory.
