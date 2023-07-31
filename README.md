@@ -728,7 +728,7 @@ Find files and folders with different criteria (name, size, type etc).
 
 
  
-### 29.  grep
+### 29.  grep *(global regular expression print)*
 	
 Grep, or global regular expression print, is one of the most versatile and useful Linux commands available. It works by searching for text and strings that users define in a given file. In other words, grep enables users to search files for a particular pattern or word and see any lines that contain it.
 
@@ -774,6 +774,8 @@ Options:
 * -s or –summarize : Provides a summary of the disk usage for the specified directory or file, without displaying individual usage details for subdirectories.
 * –time : show time of last modification of any file or directory
 * –exclude : Excludes specific directories or files from disk usage calculation based on patterns or names.
+
+
 
 
 
