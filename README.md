@@ -55,7 +55,7 @@ Following are the options we can use with man command:
 
 This command clears the screen.We can clear our terminal by using short cut `CTRL+L`.This command deletes everything, including the scrollback buffer. To keep the scrollback buffer, use clear with the -x argument. Additionally, the clear command does not reset the terminal. The shell state remains the same as before.
 
-		`clear` : Clears the terminal
+		`clear` : This command clears the terminal
   
 
 The clear -x command clears the terminal, but previous output is still available. Scroll up or use the PgUp button
