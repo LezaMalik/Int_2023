@@ -17,13 +17,9 @@ The whoami command accepts only two options:
   
 * -V, --version : Shows the version information and exit.
 
-
-
     
 ![whoami picture](./assets/whoami.JPG)
    
-
-
 
 
 ### 2. man *(manual)*
