@@ -125,6 +125,7 @@ def main():
         footer_line += "-" * (col_width + 2) + "-"
     print(footer_line)
 
+
 # Execute the main function if the script is run as the main program
 if __name__ == "__main__":
     main()
