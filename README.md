@@ -1127,7 +1127,6 @@ We need to tell:
    	* *(w - write permission)*
    	* *(x - execute permission)*
 
-
 *Example:*
 		
 		`chmod mode <file>` 
