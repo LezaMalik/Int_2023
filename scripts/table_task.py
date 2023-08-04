@@ -106,6 +106,7 @@ def main():
         header_line += "=" * (col_width + 2) + "="
     print(header_line)
 
+    
     # Print rows of data
     for line in lines[0:]:
         values = line.strip().split(',')
