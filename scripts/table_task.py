@@ -120,6 +120,7 @@ def main():
             row += " {}{}{} |".format(" " * padding, value, " " * (col_width - len(value) - padding))
         print(row)
 
+    
     # Print footer separator line
     footer_line = "-"
     for col_width in col_widths:
