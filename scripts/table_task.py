@@ -10,6 +10,7 @@
 # Allows to access command-line arguments and exit function
 import sys
 
+
 # Define a function to read the content of a file
 def read_file(filename):
     try:
