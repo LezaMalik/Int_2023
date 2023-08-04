@@ -6,6 +6,7 @@
 # Displays the first, third, seventh and tenth column from the csv file.
 # Returns the output in well formatted tabular form with proper padding. 
 
+
 # Allows to access command-line arguments and exit function
 import sys
 
