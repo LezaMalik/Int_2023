@@ -4,7 +4,6 @@
 # -i to print breif intro about you
 # -n to print your full name and fathers name
 
-
 while getopts 'ain' OPTION; do
 	case "$OPTION" in
 		a)
