@@ -7,7 +7,6 @@ def file_info_method(file_path):
     # Getting file status
     stat_info = os.stat(file_path)  
 
-  
     # Getting file permissions in symbolic format(r-w-x)
     permissions = stat.filemode(stat_info.st_mode)
 
