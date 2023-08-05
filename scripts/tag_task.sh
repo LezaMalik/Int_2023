@@ -67,6 +67,7 @@ function help() {
 filename="$1"
 tag="$2"
 
+
 # Use a switch case to perform the corresponding action based on the provided tag
 case "$tag" in
     -d)
