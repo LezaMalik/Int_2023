@@ -13,6 +13,7 @@ function last_modified_date() {
     fi
 }
 
+
 # Function to print the extension of the file
 function extension() {
     filename="$1"
