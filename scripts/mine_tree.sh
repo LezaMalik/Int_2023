@@ -5,6 +5,7 @@
 # and saves it in a csv ( comma seperated file )
 
 
+
 # find command seaches for all the files in the path (for files '-type f' flag is used)
 # $1 is the path to search for all the files (this is given as an argument while running the script)
 # Piping '|' symbol allows us to take the ouput of the find command and pipe it to the next command as an input.
