@@ -2,6 +2,7 @@ import os
 import stat
 import datetime
 
+
 def file_info_method(file_path):
   
     # Getting file status
