@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-
 # Function to print the last modified date of the file
 function last_modified_date() {
     filename="$1"
