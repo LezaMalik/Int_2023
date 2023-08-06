@@ -52,6 +52,7 @@ def walk_through_dir_method(directory):
             
             print(file_details)
 
+
 if __name__ == "__main__":
     directory_path = input("Please enter the path: ")
     walk_through_dir_method(directory_path)
