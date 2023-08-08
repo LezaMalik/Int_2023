@@ -38,26 +38,28 @@
 # Function to display usage and help information
 function display_usage {
   echo -e "\nUsage: "
-  echo -e "\n  $0 <csv_file> <-d date> [-s size] [-u user_name] [-e extension] [-h]"
-  echo -e "\nOptions:\n"
+  echo -e "  $0 <csv_file> <-d date> [-s size] [-u user_name] [-e extension] [-h]"
+  echo -e "\nOptions:"
   echo "  -d,    --date <date>         Displays all the files with the specified last modified date (YYYY-MM-DD). (e.g: 2023-07-25)"
   echo "  -s,    --size <size>         Displays all the files with given size and greater than that. (e.g: 300 , 1KB, 1GB)"
   echo "  -u,    --username <name>     Displays all the files with the specified username/owner. (e.g: leza)"
   echo "  -e,    --extension <ext>     Displays all the files with the specified extension.(Case-Insensitive) (e.g: .txt, .csv, .sh)"
   echo "  -h,    --help                Display this help message."
 
-  echo -e "\n"
   echo -e "\nExamples:"
-  echo -e "\n  -d,    --date      : ./filename datafile.csv -d 2023-07-12  | ./filename datafile.csv --date 2023-07-12"
-  echo -e "\n  -s,    --size      : ./filename datafile.csv -s 700         | ./filename datafile.csv --size 3KB"
-  echo -e "\n  -u,    --username  : ./filename datafile.csv -u leza        | ./filename datafile.csv --username leza"
-  echo -e "\n  -e,    --extension : ./filename datafile.csv -e .sh         | ./filename datafile.csv --extension .sh"
-  echo -e "\n  -h,    --hep       : ./filename datafile.csv -h             | ./filename datafile.csv --help"
-
+  echo -e "  -d,    --date      : ./filename datafile.csv -d 2023-07-12  | ./filename datafile.csv --date 2023-07-12"
+  echo -e "  -s,    --size      : ./filename datafile.csv -s 700         | ./filename datafile.csv --size 3KB"
+  echo -e "  -u,    --username  : ./filename datafile.csv -u leza        | ./filename datafile.csv --username leza"
+  echo -e "  -e,    --extension : ./filename datafile.csv -e .sh         | ./filename datafile.csv --extension .sh"
+  echo -e "  -h,    --hep       : ./filename datafile.csv -h             | ./filename datafile.csv --help"
+  echo -e "\n"
 }
 
+
+
+
 # Custom header with desired column names
-custom_header="                     Path                            Filename     File Size   Last Modified Date  Username"
+custom_header="                     Path                                       Filename         File Size   Last Modified Date  Username"
 header_spacing="--------------------------------------------------------------------------------------------------------------------------------"
 # Function to display verbose information (if enabled)
 function display_verbose {
@@ -124,6 +126,7 @@ size=""
 user_name=""
 verbose="false"
 csv_file=""
+result_found="false"  # Initialize result_found here
 
 # Process arguments using a while loop
 ## Process arguments using a while loop
@@ -204,8 +207,6 @@ if [ ! -f "$csv_file" ]; then
 fi
 
 
-
-
 # Function to filter and display the data
 function filter_and_display_data {
   local data="$1"
@@ -214,27 +215,27 @@ function filter_and_display_data {
   local filter_by_size="$4"
   local filter_by_user_name="$5"
 
-  # Convert date filters to Unix timestamps
-  local filter_by_date_timestamp=""
-  if [ -n "$filter_by_date" ]; then
-    filter_by_date_timestamp=$(convert_to_timestamp "$filter_by_date")
-  fi
-
   # Display the header when verbose mode is enabled
   if [ "$verbose" == "true" ]; then
     display_verbose
   fi
 
-  # Read each line of the CSV data and process it
+  # Initialize an empty variable to store filtered data
+  filtered_data=""
+  unique_id_counter=0
+
+  # Loop through each line of the CSV data and process it
   local IFS=$'\n'  # Set the input field separator to newline to handle CSV lines correctly
+  result_found="false"  # Initialize the result_found flag
+
   for line in $data; do
     # Extract fields from the CSV line
-    file_permissions=$(echo "$line" | awk -F ', ' '{print $1}')
-    file_owner=$(echo "$line" | awk -F ', ' '{print $2}')
-    file_size=$(echo "$line" | awk -F ', ' '{print $3}')
-    file_date=$(echo "$line" | awk -F ', ' '{print $4}')
-    file_path=$(echo "$line" | awk -F ', ' '{print $5}')
-    file_name=$(echo "$line" | awk -F ', ' '{print $6}')
+    file_permissions=$(echo "$line" | cut -d ',' -f 1)
+    file_owner=$(echo "$line" | cut -d ',' -f 2)
+    file_size=$(echo "$line" | cut -d ',' -f 3)
+    file_date=$(echo "$line" | cut -d ',' -f 4)
+    file_path=$(echo "$line" | cut -d ',' -f 5)
+    file_name=$(echo "$line" | cut -d ',' -f 6)
 
     # Convert the file_date to a Unix timestamp
     file_date_timestamp=$(convert_to_timestamp "$file_date")
@@ -243,17 +244,65 @@ function filter_and_display_data {
     file_extension="${file_name##*.}"
     file_extension="${file_extension,,}"
 
-    # Apply these 4 filters to each line of the CSV file and display matching lines
+    # Apply filters to each line of the CSV file
     if ( [ -z "$filter_by_date" ] || [ "$filter_by_date_timestamp" == "$file_date_timestamp" ] ) && \
-      ( [ -z "$filter_by_extension" ] || [[ ".$file_name" == *"$filter_by_extension" ]] ) && \
-      ( [ -z "$filter_by_user_name" ] || [[ "${file_owner,,}" == *"${filter_by_user_name,,}" ]] ) && \
-      ( [ -z "$filter_by_size" ] || [ "$(echo "$filter_by_size <= $file_size" | bc)" -eq 1 ] ); then
+       ( [ -z "$filter_by_extension" ] || [[ ".$file_extension" == *"$filter_by_extension" ]] ) && \
+       ( [ -z "$filter_by_user_name" ] || [[ "${file_owner,,}" == *"${filter_by_user_name,,}" ]] ) && \
+       ( [ -z "$filter_by_size" ] || [ "$file_size" -ge "$filter_by_size" ] ); then
       # Display matching lines with fields in the desired order using printf for formatting
-      printf "%-50s  %-15s  %-10s  %-15s  %s\n" "$file_path" "$file_name" "$file_size" "$file_date" "$file_owner"
-      result_found="true"   # Set the flag to true since a match was found
+      printf "%-60s  %-20s  %-10s  %-15s  %s\n" "$file_path" "$file_name" "$file_size" "$file_date" "$file_owner"
+
+    # Increment the unique ID counter
+      unique_id_counter=$((unique_id_counter + 1))
+
+      # Append the line with the unique ID to the filtered_data variable
+      filtered_data+="$line,$unique_id_counter\n"
+
+      # Set the result_found flag to true
+      result_found="true"
     fi
   done
+
+  
+
+
+  # Check if any matches were found
+  if [ "$result_found" == "true" ]; then
+    # Prompt the user to save the results
+    echo " "
+    read -p "Do you want to save the data to a file? (Y/N): " save_response
+    case "$save_response" in
+      [Yy])
+        read -p "Enter the name of the output file (without extension): " output_name
+        if [[ -z "$output_name" ]]; then
+          echo "Please provide a valid output file name."
+        else
+          output_file="$output_name.csv"
+          if [[ -e "$output_file" ]]; then
+            echo "File '$output_file' already exists. Please choose a different name."
+          else
+            # Remove spaces around commas in the filtered data
+            filtered_data_formatted=$(echo -e "$filtered_data" | sed 's/ *//g')
+
+            # Save the filtered data to the output file
+            echo -e "$filtered_data_formatted" > "$output_file"
+            echo "Filtered data saved to $output_file."
+          fi
+        fi
+        ;;
+      [Nn])
+        echo "Filtered data not saved."
+        ;;
+      *)
+        echo "Invalid response. Please answer 'Y' or 'N'."
+        ;;
+    esac
+  else
+    echo "No Results Found"
+  fi
 }
+
+
 
 
 echo "$header_spacing"
@@ -266,6 +315,7 @@ display_verbose
 # Filter and display the data
 result_found="false"  # Default value to track whether any results were found
 filter_and_display_data "$(tail -n +2 "$csv_file")" "$date_filter" "$extension" "$size" "$user_name"
+
 
 # Check if any matches were found
 if [ "$result_found" == "false" ]; then
