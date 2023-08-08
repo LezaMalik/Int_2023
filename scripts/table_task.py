@@ -10,8 +10,7 @@
 # Allows to access command-line arguments and exit function
 import sys
 
-
-# Define a function to read the content of a file
+# Function to read the content of a file
 def read_file(filename):
     try:
         with open(filename, 'r') as file:
@@ -21,7 +20,7 @@ def read_file(filename):
         print(f"Error: File '{filename}' not found.")  # Print an error message if the file doesn't exist
         sys.exit(1)  # Exit the script with an error code
 
-# Define a function to parse command-line flags and arguments
+# Function to parse command-line flags and arguments
 def parse_flags(args, num_columns):
     flags = {
         '-t': False,  # Initialize the '-t' flag as False
@@ -54,7 +53,7 @@ def parse_flags(args, num_columns):
     
     return flags, custom_columns  # Return the parsed flags and custom columns
 
-# Define the main function of the script
+# Main function of the script
 def main():
     if len(sys.argv) < 4:
         print("Usage: python3 table_task.py filename -t num_columns -c1 header1 -c2 header2 ...")
@@ -82,12 +81,16 @@ def main():
     
     # Calculate column widths for formatting
     col_widths = []
+    custom_columns = parse_flags(sys.argv[t_flag_index + 2:], num_columns)[1]
+
     for col_num, header in custom_columns.items():
         max_word_count = max(len(values[col_num - 1].split()) for values in lines[1:])
-        col_widths.append(max(max_word_count + 10, len(header) + 10))
-
-        # /home/leza/Documents/repos/scripts/leza.sh 
-    
+       # if col_num == 5: 
+        #    min_col_width = len(header) + 46
+        #else:
+        min_col_width = len(header) + 6
+        col_widths.append(max(max_word_count + 10, min_col_width))
+        
     # Print header separator line
     header_line = "="
     for col_width in col_widths:
@@ -107,7 +110,6 @@ def main():
         header_line += "=" * (col_width + 2) + "="
     print(header_line)
 
-    
     # Print rows of data
     for line in lines[0:]:
         values = line.strip().split(',')
@@ -121,13 +123,11 @@ def main():
             row += " {}{}{} |".format(" " * padding, value, " " * (col_width - len(value) - padding))
         print(row)
 
-    
     # Print footer separator line
     footer_line = "-"
     for col_width in col_widths:
         footer_line += "-" * (col_width + 2) + "-"
     print(footer_line)
-
 
 # Execute the main function if the script is run as the main program
 if __name__ == "__main__":
