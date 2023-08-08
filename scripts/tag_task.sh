@@ -13,7 +13,6 @@ function last_modified_date() {
     fi
 }
 
-
 # Function to print the extension of the file
 function extension() {
     filename="$1"
@@ -67,7 +66,6 @@ function help() {
 # Read the filename and tag from the command-line arguments
 filename="$1"
 tag="$2"
-
 
 # Use a switch case to perform the corresponding action based on the provided tag
 case "$tag" in
