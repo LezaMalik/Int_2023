@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ###################################################################################################
 # tree_filter.sh - A Bash script to filter data from a CSV file based on various
 # criteria such as last modified date, file size, username, and file extension.
@@ -33,8 +32,6 @@
 #   6. filter_data: Filters the CSV data based on specified criteria and displays matching lines.
 #####################################################################################################
 
-
-
 # Function to display usage and help information
 function display_usage {
   echo -e "\nUsage: "
@@ -54,8 +51,6 @@ function display_usage {
   echo -e "  -h,    --hep       : ./filename datafile.csv -h             | ./filename datafile.csv --help"
   echo -e "\n"
 }
-
-
 
 
 # Custom header with desired column names
@@ -81,7 +76,7 @@ function convert_to_timestamp {
 }
 
 
-
+# Function to convert to bytes
 function convert_to_bytes {
   local size="$1"
 
@@ -129,7 +124,6 @@ csv_file=""
 result_found="false"  # Initialize result_found here
 
 # Process arguments using a while loop
-## Process arguments using a while loop
 while [[ $# -gt 0 ]]; do
   key="$1"
 
