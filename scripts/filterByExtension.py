@@ -1,12 +1,12 @@
 # This code reads a CSV file containing information about files and their sizes. 
-# It calculates stats about file extensions and presents the data in a formatted table. 
+# It calculates statistics about file extensions and presents the data in a formatted table. 
 # The table display 5 columns
 # Extension Type, Total File Size, Number of Files, Size % per extension, % Count per extension
 # The user is given the option to save the calculated data to a new CSV file.
 # Usage: python3 myscript.py <input_csv_file>
 
 
-# Import necessary modules
+# Import modules
 import sys
 import csv
 import os
@@ -51,7 +51,7 @@ with open(input_csv, 'r') as csv_file:
 # Calculate total size of all files
 total_size = sum(ext_info['size'] for ext_info in extension_data.values())
 
-# Prepare table header
+# Table header with formatting
 table_header = f"{'Extension':<15}{'Size':<12}{'Count':<12}{'Size % ':<12}{'  Count % per ext':<12}"
 
 # Calculate total number of files
@@ -82,8 +82,10 @@ save_data = input("Do you want to save the data to a CSV file? (Y/N): ")
 if save_data.lower() == 'y':
     while True:
         csv_filename = input("Enter CSV filename to save data: ")
+        # Adds .csv extension to filename if not mentioned by user
         if not csv_filename.endswith('.csv'):
             csv_filename += '.csv'
+        # Checks for a filename that does not already exists
         if os.path.exists(csv_filename):
             print("File already exists. Please choose a different filename.")
         else:
