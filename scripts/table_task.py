@@ -1,5 +1,5 @@
-# This program takes a filename with the flag -t (no.) for tot number of columns in the file specified 
-# The flag -c(number of column)=(headnername) column nos to display with their headers from the user.
+# This program takes a filename with the flag -t (no.) for total number of columns in the file specified 
+# The flag -c(number of column)=(headnername) column numbers to display with their headers from the user.
 # Example: table_task.py filename.csv -t 10 -c1=name -c3=contact -c7=address -c10=gender
 # Here the program will first check if the file exists and have the specidied number of columns
 # Then is checks for the columns and append their headers on top 
