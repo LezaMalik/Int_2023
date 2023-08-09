@@ -1,3 +1,9 @@
+# This code returns the names and details of all the files present in a directory and its subdirectories.
+# A path to a directory is provided as input
+# It returns these stats about a file :
+# permissions, owner, size, last_modified, absolute_path, filename
+
+
 import os
 import stat
 import datetime
