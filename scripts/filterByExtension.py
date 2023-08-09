@@ -1,7 +1,7 @@
 # This code reads a CSV file containing information about files and their sizes. 
 # It calculates statistics about file extensions and presents the data in a formatted table. 
-# The table display 5 columns
-# Extension Type, Total File Size, Number of Files, Size % per extension, % Count per extension
+# The table display 5 columns in a well formatted form
+# Columns are: Extension Type, Total File Size, Number of Files, Size % per extension, % Count per extension
 # The user is given the option to save the calculated data to a new CSV file.
 # Usage: python3 myscript.py <input_csv_file>
 
