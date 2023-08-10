@@ -1,3 +1,8 @@
+# This python code generates an email to the sender with the file attachment. 
+# Sender and receiver's mail should be mentioned with sender's password.
+# Password is generated with the help of App Manager from gmail settings.
+# With the help of this code, we can send any file to the sender. 
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
