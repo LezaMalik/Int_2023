@@ -1,0 +1,37 @@
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
+
+# Email configuration
+sender_email = 'sender@gmail.com'
+receiver_email = 'receiver@gmail.com'
+subject = 'Test Email with Attachment'
+message = 'This is a Test Email to check if the attachemnet is attached properly.'
+
+# Create the MIME object
+msg = MIMEMultipart()
+msg['From'] = sender_email
+msg['To'] = receiver_email
+msg['Subject'] = subject
+msg.attach(MIMEText(message, 'plain'))
+
+# Attach the file
+attachment_path = '/home/leza/Documents/repos/scripts/xyz.csv' 
+attachment = open(attachment_path, "rb").read()
+attachment_mime = MIMEApplication(attachment, _subtype="csv") 
+attachment_mime.add_header('content-disposition', 'attachment', filename='filterByExtCheck.csv')
+msg.attach(attachment_mime)
+
+# Connect to the SMTP server
+smtp_server = smtplib.SMTP('smtp.gmail.com', 587)
+smtp_server.starttls()
+smtp_server.login(sender_email, 'mypassword') 
+
+# Send the email
+smtp_server.sendmail(sender_email, receiver_email, msg.as_string())
+
+# Close the connection
+smtp_server.quit()
+
+print("Email sent successfully.")
