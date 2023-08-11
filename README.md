@@ -49,7 +49,7 @@ Following are the options we can use with man command:
 
 ### 3. clear
 
-This command clears the screen.We can clear our terminal by using short cut `CTRL+L`.This command deletes everything, including the scrollback buffer. To keep the scrollback buffer, use clear with the -x argument. Additionally, the clear command does not reset the terminal. The shell state remains the same as before.
+This command clears the screen. We can clear our terminal by using short cut `CTRL+L`.This command deletes everything, including the scrollback buffer. To keep the scrollback buffer, use clear with the -x argument. Additionally, the clear command does not reset the terminal. The shell state remains the same as before.
 
 		`clear` : This command clears the terminal
   
@@ -71,7 +71,7 @@ Following are the options we can use with pwd command:
 
 * -L (logical) : Use PWD from environment, even if it contains symbolic links
 * -P (physical)	: Avoid all symbolic links
-* –help	 Display : this help and exit
+* –help	 : this help and exit
 * –version : Output version information and exit
 
 
@@ -111,7 +111,7 @@ Following are the flags used with ls command:
 
 ### 6. cd *(change directory)*
 
-It is used to change the current directory of the terminal. The terminal, by default, opens the home directory.
+cd stands for change directory. It is used to change the current directory of the terminal. The terminal, by default, opens the home directory.
 		
   		
 		`cd dir` 	: Changes the current directory (1 step forward)
