@@ -2,7 +2,7 @@
 # Subject, Message, File attachment, Attachement header
 # Sender and receiver's mail should be mentioned with sender's password.
 # Password is generated with the help of App Manager from gmail settings.
-# With this code, we can send any file to the sender. 
+# With this code, we can send any file to the sender.
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -12,8 +12,8 @@ from email.mime.application import MIMEApplication
 # Email configuration
 sender_email = 'sender@gmail.com'
 receiver_email = 'receiver@gmail.com'
-subject = 'Test Email with Attachment'
-message = 'This is a Test Email to check if the attachemnet is attached properly.'
+subject = 'Test Email with Attachment (file data)'
+message = 'This is a Test Email only to check if the attachemnet is attached properly.'
 
 # Create the MIME object
 msg = MIMEMultipart()
