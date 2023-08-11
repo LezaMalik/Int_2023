@@ -88,7 +88,7 @@ if save_data.lower() == 'y':
             csv_filename += '.csv'
         # Checks for a filename that does not already exists
         if os.path.exists(csv_filename):
-            print("File already exists. Please choose a different filename.")
+            print("File already exists. Please choose a different filename as it already exits.")
         else:
             # Save data to the specified CSV file
             with open(csv_filename, 'w', newline='') as csv_file:
