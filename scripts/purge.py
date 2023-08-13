@@ -1,3 +1,6 @@
+# This script reads a csv file having file details
+# and then it attempts to delete the files specified in the CSV.
+
 import csv
 import os
 import sys
