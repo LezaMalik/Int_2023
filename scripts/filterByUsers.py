@@ -1,6 +1,6 @@
 # This code reads a CSV file containing information about files
 # It calculates statistics about file users and presents the data in a formatted table. 
-# The table display 5 columns which are:
+# The table display five columns which are:
 # Username, FileSize, FileCount, FileSize % per user, FileCount % per user
 # The user is given the option to save the calculated data to a new CSV file.
 # This file works as report generator to filter files by user.
