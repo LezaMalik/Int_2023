@@ -40,7 +40,7 @@ with open(csv_file_path, 'r') as csv_file:
             deleted_files.append(row[1:] + [deletion_datetime])  # Exclude the first column and add deletion datetime
         else:
             print(f"File not found: {file_path}")
-            missing_files.append(row)  # Store the missing file record
+            missing_files.append(row[1:])  # Store the missing file record
 
 # Append the deleted file records to the existing CSV file
 if deleted_files:
