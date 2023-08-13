@@ -1,3 +1,4 @@
+# This file takes flags as returns the filtered files.
 #!/bin/bash
 
 # Function to print the last modified date of the file
