@@ -19,8 +19,9 @@ if not os.path.exists(csv_file_path):
     print("CSV file not found.")
     sys.exit(1)
 
-# Create a list to store deleted file records
+# Create lists to store deleted file records and missing file records
 deleted_files = []
+missing_files = []
 
 # Read the CSV file
 with open(csv_file_path, 'r') as csv_file:
@@ -35,11 +36,11 @@ with open(csv_file_path, 'r') as csv_file:
             os.remove(file_path)
             print(f"Deleted: {file_path}")
 
-            # Store deleted file record (excluding the first column -file permissions )
+            # Store deleted file record (excluding the first column - file permissions)
             deleted_files.append(row[1:] + [deletion_datetime])  # Exclude the first column and add deletion datetime
-
         else:
             print(f"File not found: {file_path}")
+            missing_files.append(row)  # Store the missing file record
 
 # Append the deleted file records to the existing CSV file
 if deleted_files:
@@ -49,5 +50,13 @@ if deleted_files:
         csv_writer = csv.writer(csv_output)
         csv_writer.writerows(deleted_files)
     print(f"Deleted file records appended to {deleted_records_file}")
+
+# Save the missing file records to a separate CSV file
+if missing_files:
+    missing_records_file = "missingData.csv"
+    with open(missing_records_file, 'w', newline='') as csv_output:
+        csv_writer = csv.writer(csv_output)
+        csv_writer.writerows(missing_files)
+    print(f"Missing file records saved to {missing_records_file}")
 else:
-    print("No files were deleted.")
+    print("No files were missing.")
