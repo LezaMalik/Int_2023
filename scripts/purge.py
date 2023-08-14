@@ -11,10 +11,10 @@ if len(sys.argv) != 2:
     print("Usage: python3 purge.py <csv_file>")
     sys.exit(1)
 
-# Get the CSV file path from the command-line argument
+# Get the CSV file path from the user
 csv_file_path = sys.argv[1]
 
-# Check if the provided CSV file exists
+# Check if the provided CSV file exists if not print file not found
 if not os.path.exists(csv_file_path):
     print("CSV file not found.")
     sys.exit(1)
@@ -23,7 +23,7 @@ if not os.path.exists(csv_file_path):
 deleted_files = []
 missing_files = []
 
-# Read the CSV file
+# Read the CSV file to delete files
 with open(csv_file_path, 'r') as csv_file:
     csv_reader = csv.reader(csv_file)
     for row in csv_reader:
