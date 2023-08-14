@@ -128,8 +128,8 @@ verbose="false"
 csv_file=""
 result_found="false"  # Initialize result_found here
 
+
 # Process arguments using a while loop
-## Process arguments using a while loop
 while [[ $# -gt 0 ]]; do
   key="$1"
 
