@@ -1,4 +1,4 @@
-# This script reads a csv file having file details
+# This script reads a csv file which has different file details
 # and then it attempts to delete the files specified in the CSV.
 
 import csv
