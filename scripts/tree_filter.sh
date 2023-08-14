@@ -58,7 +58,7 @@ function display_usage {
 
 
 
-# Custom header with desired column names
+# Custom header with desired column names and format
 custom_header="                     Path                                       Filename         File Size   Last Modified Date  Username"
 header_spacing="--------------------------------------------------------------------------------------------------------------------------------"
 # Function to display verbose information (if enabled)
@@ -70,7 +70,7 @@ function display_verbose {
   fi
 }
 
-
+# function to conver6 to timestamp 
 function convert_to_timestamp {
   if [ -z "$1" ]; then
     echo "0"
@@ -81,7 +81,7 @@ function convert_to_timestamp {
 }
 
 
-
+# function to convert size to bytes
 function convert_to_bytes {
   local size="$1"
 
