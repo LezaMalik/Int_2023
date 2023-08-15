@@ -1,5 +1,6 @@
 # This script reads a csv file which has different file details
-# and then it attempts to delete the files specified in the CSV.
+# and then it attempts to delete the files specified in the CSV
+# This script also saves the deleted file details in a separate file with date-time
 
 import csv
 import os
