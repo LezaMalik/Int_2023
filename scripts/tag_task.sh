@@ -1,5 +1,7 @@
-# This file takes flags as returns the filtered files.
 #!/bin/bash
+# This file takes flags as returns the filtered files.
+
+
 
 # Function to print the last modified date of the file
 function last_modified_date() {
