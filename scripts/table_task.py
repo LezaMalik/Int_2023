@@ -5,6 +5,7 @@
 # Then is checks for the columns and append their headers on top 
 # Displays the first, third, seventh and tenth column from the csv file.
 # Returns the output in well formatted tabular form with proper padding. 
+# Usage : python3 table_task.py <file.csv> -t <total-cols> -c<col-num>=<col-name>
 
 
 # Allows to access command-line arguments and exit function
