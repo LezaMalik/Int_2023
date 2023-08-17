@@ -39,7 +39,8 @@ with open(csv_file_path, 'r') as csv_file:
             os.remove(file_path)
             print(f"Deleted: {file_path}")
 
-            # Store deleted file record (excluding the first column - file permissions)
+            # Store deleted file record 
+            # (excluding the first column - file permissions)
             deleted_files.append(row[1:] + [deletion_datetime])  # Exclude the first column and add deletion datetime
         else:
             print(f"File not found: {file_path}")
