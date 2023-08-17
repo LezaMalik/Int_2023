@@ -9,7 +9,7 @@ def main():
     subject = input("Enter the subject: ")
     csv_file_path = input("Enter the path of the CSV file: ")
 
-    sender_email = ''
+    sender_email = 'write your email'
 
     # Read the contents of the CSV file for the email body
     with open(csv_file_path, 'r') as csv_file:
