@@ -3,6 +3,7 @@
 # Sender and receiver's mail should be mentioned with sender's password.
 # Password is generated with the help of App Manager from gmail settings.
 # With this code, we can send any file to the sender.
+# hardcoded email & pass just to check 
 # Usage: python3 mail.py 
 
 import smtplib
