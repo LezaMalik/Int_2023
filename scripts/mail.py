@@ -11,8 +11,8 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 
 # Email configuration
-sender_email = ''
-receiver_email = ''
+sender_email = '' #write sender mail
+receiver_email = '' #write receiver mail
 subject = 'Test Email with Attachment (file data)'
 message = 'This is a Test Email only to check if the attachemnet is attached properly.'
 
@@ -33,7 +33,7 @@ msg.attach(attachment_mime)
 # Connect to the SMTP server
 smtp_server = smtplib.SMTP('smtp.gmail.com', 587)
 smtp_server.starttls()
-smtp_server.login(sender_email, 'mypassword') # write password
+smtp_server.login(sender_email, 'mypassword') # write your password
 
 # Send the email
 smtp_server.sendmail(sender_email, receiver_email, msg.as_string())
