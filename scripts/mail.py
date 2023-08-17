@@ -11,8 +11,8 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 
 # Email configuration
-sender_email = 'sender@gmail.com'
-receiver_email = 'receiver@gmail.com'
+sender_email = ''
+receiver_email = ''
 subject = 'Test Email with Attachment (file data)'
 message = 'This is a Test Email only to check if the attachemnet is attached properly.'
 
