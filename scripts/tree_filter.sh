@@ -2,7 +2,7 @@
 
 ###################################################################################################
 # tree_filter.sh - A Bash script to filter data from a CSV file based on various
-# criteria such as last modified date, file size, username, and file extension.
+# criteria such as last modified date, file size, username, and file ext.
 #
 # Usage: 
 #   ./tree_filter.sh <csv_file> <-d date> [-s size] [-u user_name] [-e extension] [-h]
@@ -35,7 +35,7 @@
 
 
 
-# Function to display usage and help information
+# Function to display help information
 function display_usage {
   echo -e "\nUsage: "
   echo -e "  $0 <csv_file> <-d date> [-s size] [-u user_name] [-e extension] [-h]"
@@ -70,7 +70,7 @@ function display_verbose {
   fi
 }
 
-# function to conver6 to timestamp 
+# function to convert to timestamp 
 function convert_to_timestamp {
   if [ -z "$1" ]; then
     echo "0"
