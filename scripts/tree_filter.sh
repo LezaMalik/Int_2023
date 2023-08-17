@@ -2,7 +2,7 @@
 
 ###################################################################################################
 # tree_filter.sh - A Bash script to filter data from a CSV file based on various
-# criteria such as last modified date, file size, username, and file ext.
+# criteria such as last modified date, file size, username, and file extension.
 #
 # Usage: 
 #   ./tree_filter.sh <csv_file> <-d date> [-s size] [-u user_name] [-e extension] [-h]
@@ -35,7 +35,7 @@
 
 
 
-# Function to display help information
+# Function to display usage and help information
 function display_usage {
   echo -e "\nUsage: "
   echo -e "  $0 <csv_file> <-d date> [-s size] [-u user_name] [-e extension] [-h]"
@@ -58,7 +58,7 @@ function display_usage {
 
 
 
-# Custom header with desired column names and format
+# Custom header with desired column names
 custom_header="                     Path                                       Filename         File Size   Last Modified Date  Username"
 header_spacing="--------------------------------------------------------------------------------------------------------------------------------"
 # Function to display verbose information (if enabled)
@@ -70,7 +70,7 @@ function display_verbose {
   fi
 }
 
-# function to convert to timestamp 
+
 function convert_to_timestamp {
   if [ -z "$1" ]; then
     echo "0"
@@ -81,7 +81,7 @@ function convert_to_timestamp {
 }
 
 
-# function to convert size to bytes
+
 function convert_to_bytes {
   local size="$1"
 
@@ -128,8 +128,8 @@ verbose="false"
 csv_file=""
 result_found="false"  # Initialize result_found here
 
-
 # Process arguments using a while loop
+## Process arguments using a while loop
 while [[ $# -gt 0 ]]; do
   key="$1"
 
@@ -265,7 +265,7 @@ function filter_and_display_data {
       unique_id=$(generate_unique_id)
 
       # Append the line with the unique ID to the filtered_data variable
-      filtered_data+="$line,$unique_id\n"
+      filtered_data+="$file_owner,$file_size,$file_date,$file_path,$file_name,$unique_id\n"
 
       # Set the result_found flag to true
       result_found="true"
@@ -295,12 +295,12 @@ function filter_and_display_data {
 
             # Save the filtered data to the output file
             echo -e "$filtered_data_formatted" > "$output_file"
-            echo "Filtered data saved to $output_file."
+            #echo "Filtered data saved to $output_file."
           fi
         fi
         ;;
       [Nn])
-        echo "Filtered data not saved."
+        #echo "Filtered data not saved."
         ;;
       *)
         echo "Invalid response. Please answer 'Y' or 'N'."
@@ -323,7 +323,7 @@ display_verbose
 
 # Filter and display the data
 result_found="false"  # Default value to track whether any results were found
-filter_and_display_data "$(tail -n +2 "$csv_file")" "$date_filter" "$extension" "$size" "$user_name"
+filter_and_display_data "$(tail -n +1 "$csv_file")" "$date_filter" "$extension" "$size" "$user_name"
 
 
 # Check if any matches were found
