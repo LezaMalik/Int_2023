@@ -2,7 +2,7 @@
 # and then it attempts to delete the files specified in the CSV
 # This script also saves the deleted file details in a separate file with date-time
 # If the file to be deleted in not found it then saves its details in another csv file
-# Usage : python3 purge.py <file.csv>
+# Usage : python3 purge.py <filename.csv>
 
 import csv
 import os
