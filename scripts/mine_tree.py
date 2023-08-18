@@ -2,7 +2,7 @@
 # A path to a directory is provided as input
 # It returns these stats about a file :
 # permissions, owner, size, last_modified, absolute_path, filename
-
+# python3 filename.py path
 
 import os
 import stat
