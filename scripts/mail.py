@@ -4,7 +4,7 @@
 # Password is generated with the help of App Manager from gmail settings.
 # With this code, we can send any file to the sender.
 # hardcoded email & password just to check - not recommended. 
-# Usage: python3 mail.py 
+# Usage: python3 filename.py
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
