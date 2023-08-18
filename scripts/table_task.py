@@ -8,7 +8,6 @@
 # Usage : python3 table_task.py <file.csv> -t <total-cols> -c<col-num>=<col-name>
 
 
-# Allows to access command-line arguments and exit function
 import sys
 
 # Function to read the content of a file
