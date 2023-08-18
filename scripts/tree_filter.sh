@@ -35,7 +35,7 @@
 
 
 
-# Function to display usage and help information
+# Function to display help information
 function display_usage {
   echo -e "\nUsage: "
   echo -e "  $0 <csv_file> <-d date> [-s size] [-u user_name] [-e extension] [-h]"
@@ -129,7 +129,7 @@ csv_file=""
 result_found="false"  # Initialize result_found here
 
 # Process arguments using a while loop
-## Process arguments using a while loop
+## Process arguments using
 while [[ $# -gt 0 ]]; do
   key="$1"
 
