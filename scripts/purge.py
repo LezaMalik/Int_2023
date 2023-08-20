@@ -1,8 +1,5 @@
-# This script reads a csv file which has different file details
-# and then it attempts to delete the files specified in the CSV
-# This script also saves the deleted file details in a separate file with date-time
-# If the file to be deleted in not found it then saves its details in another csv file
-# Usage : python3 purge.py <filename.csv>
+# This script reads a csv file having file details
+# and then it attempts to delete the files specified in the CSV.
 
 import csv
 import os
@@ -14,10 +11,10 @@ if len(sys.argv) != 2:
     print("Usage: python3 purge.py <csv_file>")
     sys.exit(1)
 
-# Get the CSV file path from the user
+# Get the CSV file path from the command-line argument
 csv_file_path = sys.argv[1]
 
-# Check if the provided CSV file exists if not print file not found
+# Check if the provided CSV file exists
 if not os.path.exists(csv_file_path):
     print("CSV file not found.")
     sys.exit(1)
@@ -26,7 +23,7 @@ if not os.path.exists(csv_file_path):
 deleted_files = []
 missing_files = []
 
-# Read the CSV file to delete files
+# Read the CSV file
 with open(csv_file_path, 'r') as csv_file:
     csv_reader = csv.reader(csv_file)
     for row in csv_reader:
@@ -39,12 +36,11 @@ with open(csv_file_path, 'r') as csv_file:
             os.remove(file_path)
             print(f"Deleted: {file_path}")
 
-            # Store deleted file record 
-            # (excluding the first column - file permissions)
-            deleted_files.append(row[1:] + [deletion_datetime])  # Exclude the first column and add deletion datetime
+            # Store deleted file record (excluding the first column - file permissions)
+            deleted_files.append(row[0:] + [deletion_datetime])  # Exclude the first column and add deletion datetime
         else:
             print(f"File not found: {file_path}")
-            missing_files.append(row[1:])  # Store the missing file record
+            missing_files.append(row[0:])  # Store the missing file record
 
 # Append the deleted file records to the existing CSV file
 if deleted_files:
