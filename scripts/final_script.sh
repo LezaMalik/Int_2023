@@ -1,8 +1,10 @@
-#This script reads all the files from the nested folders with tree_task.sh script.
-#It also saves the record in a csv file : tree_data.csv
-#It then applies the desrired filters with the tree_filter.sh script.
-#The result is saved in a csv file : filter_data.csv
-#It then sends all the files with details via email to the desired sender.
+# This script reads all the files from the nested folders with tree_task.sh script.
+# It also saves the record in a csv file : tree_data.csv
+# It then applies the desrired filters with the tree_filter.sh script.
+# The result is saved in a csv file : filter_data.csv
+# It then sends all the files with details via email to the desired sender with emailFile.py script.
+# Finally, it purges all the files mentioned in the filter_data.csv file and saves the record to a csv file.
+
 
 
 #!/bin/bash
