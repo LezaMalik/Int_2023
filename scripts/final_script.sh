@@ -1,5 +1,8 @@
 #This script reads all the files from the nested folders with tree_task.sh script.
 #It also saves the record in a csv file : tree_data.csv
+#It then applies the desrired filters with the tree_filter.sh script.
+#The result is saved in a csv file : filter_data.csv
+
 
 #!/bin/bash
 
