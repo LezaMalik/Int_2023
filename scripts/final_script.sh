@@ -4,6 +4,8 @@
 # The result is saved in a csv file : filter_data.csv
 # It then sends all the files with details via email to the desired sender with emailFile.py script.
 # Finally, it purges all the files mentioned in the filter_data.csv file and saves the record to a csv file.
+# If the files are not found, the purge.py saves the details of those files into missingData.csv file
+# The purging part is done witht the help of this purge.py script.
 
 
 
