@@ -35,7 +35,7 @@
 
 
 
-# Function to display help information
+# Function to display usage and help information
 function display_usage {
   echo -e "\nUsage: "
   echo -e "  $0 <csv_file> <-d date> [-s size] [-u user_name] [-e extension] [-h]"
@@ -129,7 +129,7 @@ csv_file=""
 result_found="false"  # Initialize result_found here
 
 # Process arguments using a while loop
-## Process arguments using
+## Process arguments using a while loop
 while [[ $# -gt 0 ]]; do
   key="$1"
 
@@ -273,42 +273,21 @@ function filter_and_display_data {
   done
 
   
-
-
-  # Check if any matches were found
+ # Check if any matches were found
   if [ "$result_found" == "true" ]; then
-    # Prompt the user to save the results
-    echo " "
-    read -p "Do you want to save the data to a file? (Y/N): " save_response
-    case "$save_response" in
-      [Yy])
-        read -p "Enter the name of the output file (without extension): " output_name
-        if [[ -z "$output_name" ]]; then
-          echo "Please provide a valid output file name."
-        else
-          output_file="$output_name.csv"
-          if [[ -e "$output_file" ]]; then
-            echo "File '$output_file' already exists. Please choose a different name."
-          else
-            # Remove spaces around commas in the filtered data
-            filtered_data_formatted=$(echo -e "$filtered_data" | sed 's/ *//g')
-
-            # Save the filtered data to the output file
-            echo -e "$filtered_data_formatted" > "$output_file"
-            #echo "Filtered data saved to $output_file."
-          fi
-        fi
-        ;;
-      [Nn])
-        #echo "Filtered data not saved."
-        ;;
-      *)
-        echo "Invalid response. Please answer 'Y' or 'N'."
-        ;;
-    esac
+    # Save the filtered data to a fixed filename "filter_data.csv"
+    output_file="filter_data.csv"
+    
+    # Remove spaces around commas in the filtered data
+    filtered_data_formatted=$(echo -e "$filtered_data" | sed 's/ *//g')
+    
+    # Save the filtered data to the output file
+    echo -e "$filtered_data_formatted" > "$output_file"
+    echo "Filtered data saved to $output_file."
   else
     echo "No Results Found"
   fi
+
 }
 
 
@@ -324,6 +303,8 @@ display_verbose
 # Filter and display the data
 result_found="false"  # Default value to track whether any results were found
 filter_and_display_data "$(tail -n +1 "$csv_file")" "$date_filter" "$extension" "$size" "$user_name"
+
+
 
 
 # Check if any matches were found
