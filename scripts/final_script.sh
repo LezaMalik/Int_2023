@@ -1,3 +1,6 @@
+#This script reads all the files from the nested folders with tree_task.sh script.
+#It also saves the record in a csv file : tree_data.csv
+
 #!/bin/bash
 
 # Listing of all the files
