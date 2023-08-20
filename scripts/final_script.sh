@@ -7,6 +7,8 @@
 # If the files are not found, the purge.py saves the details of those files into missingData.csv file
 # The purging part is done witht the help of this purge.py script.
 
+# Usage: ./final_script.sh 
+
 
 
 #!/bin/bash
