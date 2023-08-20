@@ -2,6 +2,7 @@
 #It also saves the record in a csv file : tree_data.csv
 #It then applies the desrired filters with the tree_filter.sh script.
 #The result is saved in a csv file : filter_data.csv
+#It then sends all the files with details via email to the desired sender.
 
 
 #!/bin/bash
