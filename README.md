@@ -1136,3 +1136,102 @@ We need to tell:
   		`chmod a-x <file>`  : Removes permission from all (user, group, others) to execute.
 		
   		`chmod a+w <file>`  : Grants permission of write to all (user, group, others).
+
+
+
+
+
+### 50. scp *(secure copy)*
+
+This command is used to copy file(s) between servers in a secure way. The secure copy allows the secure transferring of files between the local host and the remote host or between two remote hosts.
+
+		`scp [option] [user_name@source_host:path/to/source/file] [user_name@target_host:target/path]`
+
+If you omit:
+
+* the user_name of the host (or target), the command defaults to the current user.
+* the path/to/source (or the target/path) from the command, the program looks for (or copies) the file locally.
+
+
+
+
+
+**If we want to copy a file from a local machine to a remote machine:**
+
+		`scp [file_name]  remoteuser@remotehost:/remote/directory`
+  
+
+*file_name = The name of the file that needs to be copied.*
+*remoteuser =The username of the remote host.*
+*remotehost = The IP address or hostname of the remote host.*
+*/remote/directory = The directory where the file should be copied on the remote machine.*
+ 
+ Example:
+ 		`scp test.txt leza@10.143.90.2:/home/leza`
+
+
+
+
+
+
+
+**If we want to copy a file from remote machine to our local machine.**
+
+		`scp user@remotehost:/home/user/file_name`
+
+ 
+*“user” = username of remote system.*
+*“remotehost” = IP address of remote system.*
+*“/home/user/file_name” = path of file that has to be copied.*
+*“.” = this means that we are copying that file in current location in local system.*
+
+
+
+
+
+
+Following are the options available for this command: 
+
+* -P	 port: Specifies the port to connect on the remote host.
+* -p	 Preserves modification times, access times, and modes from the original file.
+* -q	 Disables the progress meter.
+* -r	 Recursively copy entire directories.
+* -s	 Name of program to use for the encrypted connection. The program must understand ssh(1) options.
+
+
+
+
+
+### 51. ssh *(secure shell)*
+
+The ssh command is used to securely log into a remote machine and execute commands on that machine.
+ssh stands for “Secure Shell”. It is a protocol used to securely connect to a remote server/system. ssh is secure in the sense that it transfers the data in encrypted form between the host and the client. It transfers inputs from the client to the host and relays back the output. ssh runs at TCP/IP port 22. 
+
+
+		`ssh user_name@host(IP/Domain_name)`
+
+
+
+
+  Following are the options which can be used with ssh:
+
+
+ 
+* -1	 Forces ssh to use protocol SSH-1 only.	
+* -2	 Forces ssh to use protocol SSH-2 only.	
+* -4	Allows IPv4 addresses only.	
+* -6	Allows IPv6 addresses only.	
+* -A	Authentication agent connection forwarding is enabled.	
+* -a	Authentication agent connection forwarding is disabled.	
+* -C	Compresses all data (including stdin, stdout, stderr, and data for forwarded X11 and TCP connections) for a fasterdata  transfer
+* -c	Selects the cipher specification for encrypting the session. Specific cipher algorithm will be selected only if both the client and the server support it.	
+* -f	Requests ssh to go to background just before command execution.	
+* -g	Allows remote hosts to connect to local forwarded ports.	
+* -n	 Prevents reading from stdin.	
+* -p	 Port to connect to on the remote host.	
+* -q	Suppresses all errors and warnings	
+* -V	Display the version number.	
+* -v	 Verbose mode. 
+* -X	Enables X11 forwarding (GUI Forwarding).	
+
+
