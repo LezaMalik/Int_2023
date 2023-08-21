@@ -1161,12 +1161,14 @@ If you omit:
 		`scp [file_name]  remoteuser@remotehost:/remote/directory`
   
 
-*file_name = The name of the file that needs to be copied.*
-*remoteuser =The username of the remote host.*
-*remotehost = The IP address or hostname of the remote host.*
-*/remote/directory = The directory where the file should be copied on the remote machine.*
+* *file_name = The name of the file that needs to be copied.*
+* *remoteuser =The username of the remote host.*
+* *remotehost = The IP address or hostname of the remote host.*
+* */remote/directory = The directory where the file should be copied on the remote machine.*
+
  
  Example:
+ 
  		`scp test.txt leza@10.143.90.2:/home/leza`
 
 
@@ -1180,10 +1182,10 @@ If you omit:
 		`scp user@remotehost:/home/user/file_name`
 
  
-*“user” = username of remote system.*
-*“remotehost” = IP address of remote system.*
-*“/home/user/file_name” = path of file that has to be copied.*
-*“.” = this means that we are copying that file in current location in local system.*
+* *user = username of remote system.*
+* *remotehost = IP address of remote system.*
+* */home/user/file_name = path of file that has to be copied.*
+* *. = this means that we are copying that file in current location in local system.*
 
 
 
