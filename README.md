@@ -1154,8 +1154,7 @@ If you omit:
 
 
 
-
-
+  
 **If we want to copy a file from a local machine to a remote machine:**
 
 		`scp [file_name]  remoteuser@remotehost:/remote/directory`
@@ -1170,10 +1169,6 @@ If you omit:
  Example:
  
  		`scp test.txt leza@10.143.90.2:/home/leza`
-
-
-
-
 
 
 
